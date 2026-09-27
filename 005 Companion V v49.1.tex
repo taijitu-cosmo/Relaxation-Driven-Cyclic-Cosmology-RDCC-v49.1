@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion V (v49.1)}\\[0.2cm]
+\textbf{Theoretical C-Coefficients in RDCC}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the corrected interpretation of the coefficients
+$C_1$–$C_4$ in RDCC. In v49.1, these coefficients are fixed theoretical factors
+of order unity rather than fit parameters. Their values arise from the global
+geometric structure of the bipartite Hilbert space and the ultraviolet-suppressed
+dimension-8 operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$. This correction stabilizes
+the Boltzmann hierarchy, the likelihood structure, and the parameter-estimation
+pipeline, ensuring full EFT coherence and statistical consistency.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+The coefficients $C_1$–$C_4$ appear in several components of RDCC: the
+Boltzmann hierarchy, the covariant Poisson equation, the likelihood structure,
+and the survey interface. In earlier versions (up to v48.0), these coefficients
+were treated as fit parameters. This interpretation is incorrect.
+
+In v49.1, the coefficients $C_1$–$C_4$ are fixed theoretical factors of order
+unity. Their values arise from the global geometric structure of the bipartite
+Hilbert space and the ultraviolet-suppressed dimension-8 operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\end{equation}
+
+This Companion develops the corrected interpretation of the $C$-coefficients
+and explains their role in RDCC’s perturbation and likelihood structure.
+% ========================================================
+% 2 THEORETICAL ORIGIN OF THE C-COEFFICIENTS
+% ========================================================
+
+\section[Theoretical Origin]{Theoretical Origin}
+
+The coefficients $C_1$–$C_4$ arise from the global geometric structure of the
+bipartite Hilbert space. The global state is
+\begin{equation}
+\ket{\Psi} = \sum_n \lambda_n \ket{n}_{(+)} \otimes \ket{n}_{(-)},
+\end{equation}
+with reduced density matrices
+\begin{align}
+\rho_{(+)} &= \Tr_{(-)} \ket{\Psi}\bra{\Psi}, \\
+\rho_{(-)} &= \Tr_{(+)} \ket{\Psi}\bra{\Psi}.
+\end{align}
+
+The inter-sector coupling is encoded in the dimension-8 operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu},
+\end{equation}
+which contributes to the covariant Poisson equation, the Boltzmann hierarchy,
+and the likelihood structure.
+
+The coefficients $C_1$–$C_4$ arise from geometric contractions of the global
+metric and the energy-momentum tensors. They are therefore fixed theoretical
+factors of order unity.
+% ========================================================
+% 3 FIXED VALUES AND ROLE IN RDCC
+% ========================================================
+
+\section[Fixed Values and Role]{Fixed Values and Role}
+
+The coefficients satisfy
+\begin{align}
+C_1 &\sim \mathcal{O}(1), \\
+C_2 &\sim \mathcal{O}(1), \\
+C_3 &\sim \mathcal{O}(1), \\
+C_4 &\sim \mathcal{O}(1).
+\end{align}
+
+They are not fit parameters. Their values are determined by the global
+geometric structure and the ultraviolet suppression scale $M$.
+\subsection[Role in the Boltzmann Hierarchy]{Role in the Boltzmann Hierarchy}
+
+The coefficients appear in the covariant Poisson equation,
+\begin{equation}
+\nabla^2 \Phi - 3H(\dot{\Phi} + H\Phi)
+=
+4\pi G \left( \rho_{(+)} \delta_{(+)} + \rho_{(-)} \delta_{(-)} \right)
++
+\frac{C_1}{M^4} \, \Xi,
+\end{equation}
+where $\Xi$ encodes the geometric contribution of the dimension-8 operator.
+\subsection[Role in the Likelihood Structure]{Role in the Likelihood Structure}
+
+The coefficients appear in the covariance matrix and determine the geometric
+weighting of the residuals,
+\begin{equation}
+\mathcal{L}
+=
+\exp\left(
+-\frac{1}{2}
+\Delta\mathbf{d}^{\mathrm{T}}
+\mathbf{C}^{-1}
+\Delta\mathbf{d}
+\right),
+\end{equation}
+where $\mathbf{C}$ contains the full cross-correlations between CMB, BAO, RSD
+multipoles, supernovae, and gravitational-wave observables.
+% ========================================================
+% 4 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected interpretation of the coefficients
+$C_1$–$C_4$ in RDCC. In v49.1, these coefficients are fixed theoretical factors
+of order unity rather than fit parameters. Their values arise from the global
+geometric structure of the bipartite Hilbert space and the ultraviolet-suppressed
+dimension-8 operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$.
+
+These results stabilize the Boltzmann hierarchy (Companion VII), the likelihood
+structure (Companion VIII), the parameter-estimation pipeline (Companion IX),
+and the survey interface (Companion XII). Together, they ensure full EFT
+coherence and statistical consistency.
+
+\end{document}

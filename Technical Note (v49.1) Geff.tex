@@ -1,0 +1,282 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+\title{\textbf{Technical Note (v49.1)}\\[0.2cm]
+\textbf{Effective Gravitational Coupling in RDCC}\\[0.15cm]
+\large Reconciliation of \(G_{\mathrm{eff}}\) between Companions I and XI}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Companions I and XI of RDCC v49.1 employ two incompatible expressions for the
+effective Newton constant inferred by a visible-sector observer. Companion I
+obtains
+\(G_{\mathrm{eff}}=G_N\bigl(1+\rho_{(-)}/\rho_{(+)}\bigr)\)
+from equating the global and sectoral linearized Einstein responses.
+Companion XI writes the reciprocal, including a relaxation piece in the
+denominator. Both papers share the same global Friedmann equation
+\(3H^2=8\pi G_N(\rho_{(+)}+\rho_{(-)}+\rho_{\mathrm{rel}})\). That equation
+fixes the projection uniquely: the Companion-I form is the consistent
+result, with an optional \(\mathcal{O}(\alpha_{\mathrm{IR}})\) extension
+\(\rho_{\mathrm{rel}}/\rho_{(+)}\). The working \(\Omega\)-form of \(H(z)\)
+in Companion XI remains valid and does not require the inverted
+\(G_{\mathrm{eff}}\). This note records the algebra and the replacement rule
+for Companion XI. It introduces no new parameter and no new interaction.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Purpose}
+
+This note consolidates one structural inconsistency in RDCC v49.1. It does
+not modify the bipartite CPT postulate, the dimension-8 operator, or the
+freeze-out scale of Companion XII. It answers a single question: which
+expression for \(G_{\mathrm{eff}}\) follows from the global Einstein
+equation already adopted in both Companions I and XI?
+
+\section{The two published formulae}
+
+Companion I derives the sectoral coupling from
+\begin{equation}
+  \delta G_{\mu\nu}
+  =
+  8\pi G_N
+  \bigl(
+    \delta T^{(+)}_{\mu\nu}
+    +
+    \delta T^{(-)}_{\mu\nu}
+  \bigr)
+\end{equation}
+and from the sectoral rewriting
+\begin{equation}
+  \delta G_{\mu\nu}
+  =
+  8\pi G_{\mathrm{eff}}\,
+  \delta T^{(+)}_{\mu\nu}.
+\end{equation}
+Equating the two responses yields
+\begin{equation}
+  G_{\mathrm{eff}}
+  =
+  G_N
+  \left(
+    1
+    +
+    \frac{\delta T^{(-)}_{\mu\nu}}{\delta T^{(+)}_{\mu\nu}}
+  \right).
+  \label{eq:Ilinear}
+\end{equation}
+On a homogeneous FRW background this becomes
+\begin{equation}
+  G_{\mathrm{eff}}^{\mathrm{(I)}}
+  =
+  G_N
+  \left(
+    1
+    +
+    \frac{\rho_{(-)}}{\rho_{(+)}}
+  \right).
+  \label{eq:GI}
+\end{equation}
+
+Companion XI instead writes
+\begin{equation}
+  G_{\mathrm{eff}}^{\mathrm{(XI)}}
+  =
+  \frac{G_N}{
+    1
+    +
+    \rho_{(-)}/\rho_{(+)}
+    +
+    \rho_{\mathrm{rel}}/\rho_{(+)}
+  }.
+  \label{eq:GXI}
+\end{equation}
+Equations~\eqref{eq:GI} and~\eqref{eq:GXI} are not equivalent. At most one
+of them can be the projection of the same global Einstein equation.
+
+\section{Global constraint}
+
+Both Companions accept
+\begin{equation}
+  G_{\mu\nu}
+  =
+  8\pi G_N
+  \bigl(
+    T^{(+)}_{\mu\nu}
+    +
+    T^{(-)}_{\mu\nu}
+    +
+    T^{\mathrm{rel}}_{\mu\nu}
+  \bigr)
+\end{equation}
+and the background reduction
+\begin{equation}
+  3H^2
+  =
+  8\pi G_N
+  \bigl(
+    \rho_{(+)}
+    +
+    \rho_{(-)}
+    +
+    \rho_{\mathrm{rel}}
+  \bigr).
+  \label{eq:globalH}
+\end{equation}
+A visible-sector observer who parametrizes the same expansion as
+\begin{equation}
+  3H^2
+  =
+  8\pi G_{\mathrm{eff}}\, \rho_{(+)}
+  +
+  \Lambda_{\mathrm{eff}}
+  \label{eq:sectorH}
+\end{equation}
+must match coefficients with Eq.~\eqref{eq:globalH}. Absorbing
+\(\rho_{\mathrm{rel}}\) either into \(G_{\mathrm{eff}}\) or into
+\(\Lambda_{\mathrm{eff}}\) is a bookkeeping choice; it cannot invert the
+sum \(\rho_{(+)}+\rho_{(-)}\).
+
+Identifying the matter piece of Eq.~\eqref{eq:sectorH} with the first two
+terms of Eq.~\eqref{eq:globalH} gives immediately
+\begin{equation}
+  G_{\mathrm{eff}}
+  =
+  G_N
+  \left(
+    1
+    +
+    \frac{\rho_{(-)}}{\rho_{(+)}}
+    +
+    \frac{\rho_{\mathrm{rel}}}{\rho_{(+)}}
+  \right),
+  \label{eq:Gfinal}
+\end{equation}
+or, if \(\rho_{\mathrm{rel}}\) is kept inside \(\Lambda_{\mathrm{eff}}\),
+the Companion-I result Eq.~\eqref{eq:GI}. In either convention
+\(G_{\mathrm{eff}}\ge G_N\). The reciprocal Eq.~\eqref{eq:GXI} would make
+gravity \emph{weaker} as the mirror density grows, which contradicts
+Eq.~\eqref{eq:globalH}: adding \(\rho_{(-)}\) increases \(H\), it does not
+decrease \(G_N\rho_{(+)}\).
+
+\section{Adopted definition}
+
+The Phase-1 definition is therefore
+\begin{equation}
+  \boxed{
+    G_{\mathrm{eff}}
+    =
+    G_N
+    \left(
+      1
+      +
+      \frac{\rho_{(-)}}{\rho_{(+)}}
+      +
+      \frac{\rho_{\mathrm{rel}}}{\rho_{(+)}}
+    \right).
+  }
+  \label{eq:box}
+\end{equation}
+On backgrounds where \(\rho_{\mathrm{rel}}/\rho_{(+)}\) is of order
+\(\alpha_{\mathrm{IR}}\simeq0.018\), the last term may be dropped and
+Eq.~\eqref{eq:GI} recovered. Companion I is the correct leading projection.
+Companion XI must replace Eq.~\eqref{eq:GXI} by Eq.~\eqref{eq:box}.
+
+\section{What does not change}
+
+The practical Hubble function of Companion XI,
+\begin{equation}
+  H^2(z)
+  =
+  H_0^2
+  \Bigl[
+    \Omega_b(1+z)^3
+    +
+    \Omega_{\mathrm{DM,eff}}(1+z)^3
+    +
+    \Omega_r(1+z)^4
+    +
+    \Omega_\Lambda^{\mathrm{eff}}
+    +
+    \delta_{\mathrm{rel}}(z)
+  \Bigr],
+\end{equation}
+already implements Eq.~\eqref{eq:globalH} in \(\Omega\)-language:
+\(\Omega_{\mathrm{DM,eff}}\) counts \(\rho_{(-)}\) with the same \(G_N\)
+that multiplies \(\rho_{(+)}\). That equation is consistent and should be
+kept. It must not be rewritten with the inverted \(G_{\mathrm{eff}}\),
+which would double-count or cancel the mirror contribution.
+
+Linear growth and gravitational slip continue to use the global Poisson
+structure of Companion VII,
+\begin{equation}
+  \nabla^2\Phi-3H(\dot\Phi+H\Phi)
+  =
+  4\pi G_N
+  \bigl(
+    \rho_{(+)}\delta_{(+)}
+    +
+    \rho_{(-)}\delta_{(-)}
+  \bigr)
+  +
+  \cdots,
+\end{equation}
+not a sectoral \(G_{\mathrm{eff}}\) inserted only on \(\delta_{(+)}\).
+The background projection Eq.~\eqref{eq:box} and the perturbation source
+are the same global coupling, written once for FRW and once for
+\(\delta\rho\).
+
+\section{Replacement rule for Companion XI}
+
+In the subsection ``Visible-sector projection'' of Companion XI, replace
+Eq.~\eqref{eq:GXI} by Eq.~\eqref{eq:box} and add:
+\begin{quote}
+The inverted expression published in an earlier draft of this Companion
+is incompatible with the global Friedmann constraint
+\(3H^2=8\pi G_N(\rho_{(+)}+\rho_{(-)}+\rho_{\mathrm{rel}})\). The
+\(\Omega\)-form of \(H(z)\) is unchanged.
+\end{quote}
+No other companion that writes \(G_{\mathrm{eff}}=G_N(1+\rho_-/\rho_+)\)
+requires amendment. Any occurrence of the reciprocal should be treated as
+superseded by this note.
+
+\section{Relation to the \texorpdfstring{\(k_{\mathrm{rel}}\)}{k\_rel} note}
+
+The numerical evaluation of
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\) uses the
+\(\Omega\)-form of \(H(a)\), hence \(G_N\) and both densities, not the
+inverted \(G_{\mathrm{eff}}\). That table is therefore stable under the
+present reconciliation. What would have been unstable is a background
+integrated with Eq.~\eqref{eq:GXI}: mirror density would have suppressed
+rather than sourced expansion.
+
+\section{What this note does not decide}
+
+The note does not derive \(\rho_{(-)}/\rho_{(+)}\) from first principles,
+does not identify that ratio with \(\Omega_{\mathrm{DM}}/\Omega_b\), and
+does not promote \(\rho_{\mathrm{rel}}\) beyond an
+\(\mathcal{O}(\alpha_{\mathrm{IR}})\) bookkeeping term. Those are separate
+questions. The only claim is the projection identity
+Eq.~\eqref{eq:box}.
+
+\end{document}

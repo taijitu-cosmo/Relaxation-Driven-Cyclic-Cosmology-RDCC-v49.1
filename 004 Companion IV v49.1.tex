@@ -1,0 +1,196 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion IV (v49.1)}\\[0.2cm]
+\textbf{Thermodynamic Sector and Dissipation Blockade}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the thermodynamic sector of RDCC in its fully
+reconstructed and Phase-1-integrated v49.1 form. The visible and mirror sectors
+possess opposite thermodynamic arrows of time, ensuring global CPT invariance.
+The mirror sector cannot dissipate energy, leading to a thermodynamic blockade
+that prevents the formation of compact objects and results in diffuse,
+non-compact halos. We derive the global entropy structure, the Lindblad-like
+effective dissipator, and the sectoral projection of thermodynamic quantities.
+These results integrate the dimension-8 inter-sector operator, the global
+definition of $\alpha(t)$, and the ultraviolet structure developed in
+Companions III and X.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+Thermodynamics plays a central role in RDCC. The Universe is described by a
+global CPT-symmetric quantum state defined on a bipartite Hilbert space,
+\begin{equation}
+\mathcal{H} = \mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)}.
+\end{equation}
+
+The visible and mirror sectors arise as reduced density matrices of this global
+state and possess thermodynamic arrows of time that point in opposite
+directions. This inversion ensures global CPT invariance even though each
+sector individually exhibits irreversible behaviour.
+
+In standard cosmology, dissipation is possible in all sectors, allowing the
+formation of compact objects such as stars, galaxies, and black holes. In RDCC,
+dissipation is blocked in the mirror sector due to its reversed thermodynamic
+arrow. As a consequence, the mirror sector cannot form compact objects and
+instead forms diffuse, non-compact halos.
+
+This Companion develops the corrected thermodynamic sector of RDCC in its
+v49.1 form. We derive the global entropy structure, establish the thermodynamic
+dissipation blockade, and present the Lindblad-like effective dissipator that
+governs the irreversible behaviour of the visible sector.
+% ========================================================
+% 2 THERMODYNAMIC ARROWS AND GLOBAL ENTROPY
+% ========================================================
+
+\section[Thermodynamic Arrows and Global Entropy]{Thermodynamic Arrows and Global Entropy}
+
+The global state is written as
+\begin{equation}
+\ket{\Psi} = \sum_n \lambda_n \ket{n}_{(+)} \otimes \ket{n}_{(-)},
+\end{equation}
+with reduced density matrices
+\begin{align}
+\rho_{(+)} &= \Tr_{(-)} \ket{\Psi}\bra{\Psi}, \\
+\rho_{(-)} &= \Tr_{(+)} \ket{\Psi}\bra{\Psi}.
+\end{align}
+
+\subsection[Thermodynamic Arrow of the Visible Sector]{Thermodynamic Arrow of the Visible Sector}
+
+The visible sector evolves forward in time,
+\begin{equation}
+\frac{d}{dt} S_{(+)}(t) \ge 0,
+\end{equation}
+where $S_{(+)} = -\Tr(\rho_{(+)} \log \rho_{(+)})$ is the von Neumann entropy.
+
+\subsection[Thermodynamic Arrow of the Mirror Sector]{Thermodynamic Arrow of the Mirror Sector}
+
+The mirror sector evolves backward in time,
+\begin{equation}
+\frac{d}{dt} S_{(-)}(-t) \ge 0.
+\end{equation}
+
+This inversion ensures global CPT invariance,
+\begin{equation}
+S_{(+)}(t) + S_{(-)}(-t) = \text{constant}.
+\end{equation}
+
+\subsection[Global Entropy Conservation]{Global Entropy Conservation}
+
+The global entropy
+\begin{equation}
+S_{\mathrm{global}} = -\Tr(\ket{\Psi}\bra{\Psi} \log \ket{\Psi}\bra{\Psi})
+\end{equation}
+is constant because the global state is pure. Irreversibility arises only after
+sectoral projection.
+% ========================================================
+% 3 DISSIPATION BLOCKADE AND LINDBLAD STRUCTURE
+% ========================================================
+
+\section[Dissipation Blockade and Lindblad Structure]{Dissipation Blockade and Lindblad Structure}
+
+The mirror sector cannot dissipate energy. Its reversed thermodynamic arrow
+prevents the formation of compact objects. Dissipation requires
+\begin{equation}
+\frac{d}{dt} S \ge 0,
+\end{equation}
+but the mirror sector evolves according to
+\begin{equation}
+\frac{d}{dt} S_{(-)}(-t) \ge 0,
+\end{equation}
+which forbids standard cooling processes.
+
+\subsection[Non-Compact Halos]{Non-Compact Halos}
+
+The mirror sector forms diffuse, non-compact halos. These halos contribute to
+the gravitational potential experienced by the visible sector and are
+interpreted as dark matter.
+\subsection[Lindblad-Like Dissipator]{Lindblad-Like Dissipator}
+
+The visible sector evolves according to
+\begin{equation}
+\dot{\rho}_{(+)} =
+- i [H_{(+)}, \rho_{(+)}]
++ \mathcal{D}_{\mathrm{eff}}[\rho_{(+)}],
+\end{equation}
+with dissipator
+\begin{equation}
+\mathcal{D}_{\mathrm{eff}}[\rho]
+=
+\sum_{n} \gamma_n
+\left(
+L_n \rho L_n^\dagger
+- \frac{1}{2} \{ L_n^\dagger L_n, \rho \}
+\right).
+\end{equation}
+
+The coefficients $\gamma_n$ scale as
+\begin{equation}
+\gamma_n \propto \frac{1}{M^4},
+\end{equation}
+consistent with the dimension-8 suppression.
+
+This structure provides the microscopic origin of the thermodynamic arrow of
+time: the visible sector behaves as an open quantum system after tracing out the
+mirror sector, and the Lindblad dissipator generates entropy production.
+% ========================================================
+% 4 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected thermodynamic sector of RDCC in its
+v49.1 form. The visible and mirror sectors possess opposite thermodynamic
+arrows of time, ensuring global CPT invariance. The mirror sector cannot
+dissipate energy, leading to a thermodynamic blockade that prevents the
+formation of compact objects and results in diffuse, non-compact halos.
+
+The global entropy structure, the Lindblad-like effective dissipator, and the
+dimension-8 inter-sector operator form the backbone of RDCC's thermodynamic
+interpretation. These results integrate the relaxation sector (Companion III),
+the ultraviolet sector (Companion X), the Boltzmann hierarchy (Companion VII),
+and the growth suppression (Companion XIII).
+
+\end{document}

@@ -1,0 +1,610 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion XII (v49.1)}\\[0.2cm]
+\textbf{Relaxation Scale and Freeze-Out Geometry}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ==========================================================
+% ABSTRACT
+% ==========================================================
+\begin{abstract}
+A characteristic relaxation scale \(k_{\mathrm{rel}}\) appears throughout the
+phenomenology of Relaxation-Driven Cyclic Cosmology (RDCC). Previous generations
+of the framework introduced this scale as a phenomenological quantity governing
+growth suppression, gravitational-wave damping, redshift-space distortions, weak
+lensing, and gravitational slip. In the present Companion, the relaxation scale
+is reinterpreted as a dynamical consequence of the freeze-out geometry of the
+relaxation sector. By connecting the global relaxation dynamics to the horizon
+structure of the early Universe, the relaxation scale emerges naturally from the
+freeze-out epoch. The resulting framework establishes a theoretical bridge
+between the dimension-8 inter-sector operator, the infrared relaxation parameter
+\(\alpha_{\mathrm{IR}}\), primordial tensor damping, and the observable
+large-scale structure of the Universe.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ==========================================================
+\section{Introduction}
+% ==========================================================
+
+Several observable sectors of RDCC contain a common characteristic scale. These
+include:
+\begin{itemize}
+  \item the suppression of small-scale structure,
+  \item the scale dependence of the growth rate,
+  \item redshift-space distortions,
+  \item weak gravitational lensing,
+  \item gravitational slip,
+  \item primordial tensor damping.
+\end{itemize}
+
+Historically these phenomena were described using the relaxation scale
+\begin{equation}
+  k_{\mathrm{rel}}.
+\end{equation}
+Although observationally useful, the origin of this scale remained unclear. The
+purpose of the present Companion is to demonstrate that the relaxation scale
+arises naturally from the freeze-out geometry of the relaxation sector and is
+therefore not an independent fundamental parameter.
+
+This Companion occupies a central position within the RDCC architecture. It
+provides the missing bridge between
+\begin{itemize}
+  \item the relaxation dynamics developed in Companion VI,
+  \item the tensor sector developed in Companion II,
+  \item the background cosmology established in Companion XI,
+  \item and the perturbation framework of Companion VII.
+\end{itemize}
+
+% ==========================================================
+\section{Global Relaxation Dynamics}
+% ==========================================================
+
+The leading interaction between the visible and mirror sectors is encoded in the
+dimension-8 operator
+\begin{equation}
+  \mathcal{O}_{\mathrm{int}}
+  =
+  \frac{1}{M^4}
+  T_{\mu\nu}^{(+)} T^{(-)\mu\nu}.
+\end{equation}
+This operator generates the effective relaxation sector of RDCC and gives rise
+to the global relaxation parameter
+\begin{equation}
+  \alpha(t).
+\end{equation}
+
+The infrared evolution of the relaxation parameter is described by
+\begin{equation}
+  \dot{\alpha}
+  =
+  -
+  \Gamma_{\mathrm{IR}}
+  \alpha.
+\end{equation}
+The corresponding solution is
+\begin{equation}
+  \alpha(t)
+  =
+  \alpha_{\mathrm{IR}}
+  +
+  \left(
+    \alpha_0 - \alpha_{\mathrm{IR}}
+  \right)
+  e^{-\Gamma_{\mathrm{IR}} t}.
+\end{equation}
+
+The infrared fixed point is
+\begin{equation}
+  \alpha_{\mathrm{IR}}
+  =
+  0.0176 \pm 0.0021.
+\end{equation}
+This single quantity governs the entire RDCC prediction vector, including:
+\begin{equation}
+  n_s,
+  \qquad
+  \Delta N_{\mathrm{eff}},
+  \qquad
+  f\sigma_8,
+  \qquad
+  \Omega_{\mathrm{GW}}.
+\end{equation}
+
+The present Companion extends this framework by showing that the characteristic
+relaxation scale also follows from the same dynamics.
+
+% ==========================================================
+\section{Connection to the Freeze-Out Picture}
+% ==========================================================
+
+Earlier generations of RDCC described relaxation through a Hubble-coupled
+relaxation rate
+\begin{equation}
+  \Gamma(a)
+  =
+  \beta(a)\, H(a).
+\end{equation}
+The relaxation parameter evolved according to
+\begin{equation}
+  \frac{d\alpha}{d\ln a}
+  =
+  \Gamma(a)\, \alpha.
+\end{equation}
+Although formulated differently, this description captures the same physical
+process as the infrared relaxation equation.
+
+The crucial event is the transition between relaxation-dominated evolution and
+standard post-relaxation evolution. This transition defines the freeze-out
+scale factor
+\begin{equation}
+  a_{\mathrm{fr}}.
+\end{equation}
+In the improved running-coupling picture of RDCC, freeze-out occurs when
+\begin{equation}
+  \beta(a_{\mathrm{fr}})
+  =
+  1.
+\end{equation}
+At this moment,
+\begin{equation}
+  \Gamma(a_{\mathrm{fr}})
+  =
+  H(a_{\mathrm{fr}}).
+\end{equation}
+The freeze-out epoch therefore identifies a distinguished moment in the
+evolution of the relaxation sector and provides the geometric origin of the
+relaxation scale.
+% ==========================================================
+\section{Freeze-Out Geometry}
+% ==========================================================
+
+The freeze-out epoch marks the end of the relaxation-dominated phase of
+cosmological evolution. Before freeze-out, the relaxation sector contributes
+significantly to the evolution of the metric response. After freeze-out, the
+relaxation parameter approaches its infrared fixed point and remains
+effectively constant throughout all observable epochs.
+
+The Phase-1 integrated RDCC framework adopts
+\begin{equation}
+  a_{\mathrm{fr}} \simeq 10^{-4},
+\end{equation}
+consistent with the freeze-out analysis of the relaxation sector. At this epoch
+the condition
+\begin{equation}
+  \Gamma(a_{\mathrm{fr}}) = H(a_{\mathrm{fr}})
+\end{equation}
+separates two cosmological regimes:
+\begin{enumerate}[label=\arabic*.]
+  \item Relaxation-dominated evolution
+  \begin{equation}
+    \Gamma \gtrsim H,
+  \end{equation}
+  \item Post-relaxation evolution
+  \begin{equation}
+    \Gamma \ll H.
+  \end{equation}
+\end{enumerate}
+The freeze-out surface therefore acts as a geometric boundary within the
+cosmological evolution of RDCC. The relaxation scale emerges directly from this
+boundary.
+
+% ==========================================================
+\section{Horizon Definition of the Relaxation Scale}
+% ==========================================================
+
+The earliest explicit appearance of the relaxation scale within the RDCC
+framework occurs in the tensor sector. Tensor modes that re-enter the horizon
+during the relaxation-dominated epoch experience additional damping, whereas
+modes that re-enter later evolve almost identically to their standard
+cosmological counterparts. This motivates the definition
+\begin{equation}
+  k_{\mathrm{rel}}^{(H)}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}).
+  \label{eq:krelH}
+\end{equation}
+The quantity \(k_{\mathrm{rel}}^{(H)}\) corresponds to the comoving horizon
+scale at freeze-out.
+
+Modes satisfying
+\begin{equation}
+  k < k_{\mathrm{rel}}
+\end{equation}
+re-enter after the relaxation epoch and therefore experience little or no
+relaxation-induced suppression. Conversely,
+\begin{equation}
+  k > k_{\mathrm{rel}}
+\end{equation}
+identifies modes that re-enter during the relaxation epoch and consequently
+acquire additional damping. The relaxation scale therefore separates the
+perturbation spectrum into two dynamically distinct sectors.
+
+% ==========================================================
+\section{Tensor Origin of the Relaxation Scale}
+% ==========================================================
+
+The tensor sector provides the most direct physical interpretation of the
+relaxation scale. Tensor perturbations obey
+\begin{equation}
+  \ddot{h}_{k}
+  +
+  (3H + \Gamma)\, \dot{h}_{k}
+  +
+  \frac{k^{2}}{a^{2}} h_{k}
+  =
+  0.
+  \label{eq:tensorrel}
+\end{equation}
+Using
+\begin{equation}
+  \Gamma(a)
+  =
+  \alpha(a)\, H(a),
+\end{equation}
+the evolution equation becomes
+\begin{equation}
+  \ddot{h}_{k}
+  +
+  (3 + \alpha) H\, \dot{h}_{k}
+  +
+  \frac{k^{2}}{a^{2}} h_{k}
+  =
+  0.
+\end{equation}
+
+Tensor modes crossing the horizon during the relaxation epoch experience a
+cumulative damping given by
+\begin{equation}
+  T_{\mathrm{rel}}(k)
+  =
+  \exp
+  \left[
+    -\frac{1}{2}
+    \int \alpha(a)\, d\ln a
+  \right].
+\end{equation}
+For sufficiently large wavenumbers,
+\begin{equation}
+  k > k_{\mathrm{rel}},
+\end{equation}
+one obtains the approximate transfer function
+\begin{equation}
+  T_{\mathrm{rel}}(k)
+  \simeq
+  \left(
+    \frac{k}{k_{\mathrm{rel}}}
+  \right)^{-\alpha_{\mathrm{eff}}}.
+  \label{eq:Trel}
+\end{equation}
+
+The appearance of the same characteristic scale in both tensor damping and
+large-scale-structure observables strongly suggests a common geometric origin.
+Consequently, Companion XII interprets Eq.~(\ref{eq:krelH}) as the fundamental
+definition of the relaxation scale.
+% ==========================================================
+\section{Filter Interpretation of the Relaxation Scale}
+% ==========================================================
+
+The horizon definition provides a geometric interpretation of the relaxation
+scale. A complementary perspective may be obtained from the dynamics of
+perturbations themselves. In this picture the relaxation sector acts as a
+filter that damps sufficiently short-wavelength modes.
+
+A characteristic filter scale may therefore be defined by
+\begin{equation}
+  k_{\mathrm{rel}}^{(F)}
+  =
+  \frac{\Gamma(a)}{c_{\mathrm{eff}}(a)},
+  \label{eq:krelfilter}
+\end{equation}
+where \(c_{\mathrm{eff}}\) denotes the effective propagation speed of
+relaxation disturbances in the coupled visible--mirror system.
+
+The precise microscopic form of \(c_{\mathrm{eff}}\) is not currently known
+within the Phase-1 framework. In general one expects
+\begin{equation}
+  c_{\mathrm{eff}}
+  =
+  f
+  \big(
+    c_{s,+},\,
+    c_{s,-},\,
+    \rho_{(+)},\,
+    \rho_{(-)}
+  \big),
+\end{equation}
+where
+\begin{itemize}
+  \item \(c_{s,+}\) is the visible-sector sound speed,
+  \item \(c_{s,-}\) is the mirror-sector sound speed,
+  \item \(\rho_{(+)}\) and \(\rho_{(-)}\) are the sectoral energy densities.
+\end{itemize}
+The explicit construction of this effective velocity remains an open problem
+and is deferred to future work.
+
+Nevertheless, Eq.~(\ref{eq:krelfilter}) provides useful physical intuition:
+relaxation becomes effective once the relaxation rate exceeds the propagation
+rate of perturbations.
+
+% ==========================================================
+\section{Consistency Relation Between the Two Pictures}
+% ==========================================================
+
+At freeze-out,
+\begin{equation}
+  \Gamma(a_{\mathrm{fr}})
+  =
+  H(a_{\mathrm{fr}}).
+\end{equation}
+Substituting this relation into Eq.~(\ref{eq:krelfilter}) yields
+\begin{equation}
+  k_{\mathrm{rel}}^{(F)}
+  =
+  \frac{H(a_{\mathrm{fr}})}{c_{\mathrm{eff}}(a_{\mathrm{fr}})}.
+\end{equation}
+Expressed in comoving variables,
+\begin{equation}
+  k_{\mathrm{rel}}^{(F)}
+  =
+  \frac{a_{\mathrm{fr}} H(a_{\mathrm{fr}})}{c_{\mathrm{eff}}(a_{\mathrm{fr}})}.
+\end{equation}
+Using the horizon definition,
+\begin{equation}
+  k_{\mathrm{rel}}^{(H)}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}),
+\end{equation}
+one finds
+\begin{equation}
+  k_{\mathrm{rel}}^{(F)}
+  =
+  \frac{k_{\mathrm{rel}}^{(H)}}{c_{\mathrm{eff}}(a_{\mathrm{fr}})}.
+  \label{eq:consistency}
+\end{equation}
+
+The two descriptions therefore differ only through an order-unity factor
+associated with the effective signal speed of the coupled sectors.
+Companion~XII interprets this relation as evidence that both pictures describe
+the same underlying physical scale. The horizon picture provides a geometric
+definition, whereas the filter picture provides a dynamical interpretation.
+
+% ==========================================================
+\section{From Freeze-Out to Structure Formation}
+% ==========================================================
+
+The relaxation scale immediately propagates into the observable structure of
+the Universe. Modes satisfying
+\begin{equation}
+  k < k_{\mathrm{rel}}
+\end{equation}
+remain largely unaffected by relaxation effects. Modes satisfying
+\begin{equation}
+  k > k_{\mathrm{rel}}
+\end{equation}
+experience progressive suppression.
+
+This behavior generates the characteristic RDCC modification of growth
+observables. A generic quantity
+\begin{equation}
+  X \in \{D, f, \gamma\}
+\end{equation}
+may be written schematically as
+\begin{equation}
+  X_{\mathrm{RDCC}}(k,a)
+  =
+  X(a)
+  \left[
+    1
+    -
+    \chi
+    \left(
+      \frac{k}{k_{\mathrm{rel}}}
+    \right)^{n}
+  \right],
+\end{equation}
+where
+\begin{itemize}
+  \item \(D\) denotes the growth factor,
+  \item \(f\) denotes the growth rate,
+  \item \(\gamma\) denotes the growth index,
+  \item \(n\) characterizes the suppression shape.
+\end{itemize}
+The precise value of \(n\) depends on the detailed perturbative treatment and
+therefore belongs to the modernization of Companion~VII.
+
+The important result established here is that all of these observables inherit
+the same relaxation scale defined by the freeze-out geometry.
+
+% ==========================================================
+\section{Connection to Companion VII}
+% ==========================================================
+
+The Boltzmann hierarchy of RDCC uses the mirror-sector contrast
+\(\delta_{(-)}\) instead of a conventional cold-dark-matter perturbation. The
+relaxation scale derived in the present Companion provides the missing
+geometric input required for a consistent treatment of
+\begin{itemize}
+  \item growth suppression,
+  \item velocity divergence,
+  \item redshift-space distortions,
+  \item scale-dependent clustering.
+\end{itemize}
+Companion~XII therefore supplies the theoretical foundation required for the
+next-stage modernization of Companion~VII.
+% ==========================================================
+\section{Connection to Gravitational Slip}
+% ==========================================================
+
+The gravitational slip parameter
+\begin{equation}
+  \eta
+  =
+  \frac{\Phi}{\Psi}
+\end{equation}
+provides a sensitive probe of modifications to the metric sector. Within the
+RDCC framework, the relaxation scale defines the characteristic transition
+between scales that retain their standard metric response and scales affected
+by relaxation dynamics. Consequently, the same relaxation scale appears
+naturally in the gravitational slip sector.
+
+Modes satisfying
+\begin{equation}
+  k > k_{\mathrm{rel}}
+\end{equation}
+are expected to develop the strongest deviation from the standard relation
+\begin{equation}
+  \Phi = \Psi.
+\end{equation}
+The detailed derivation of the scale-dependent slip belongs to the
+modernization of Companion~XLIV. The present Companion establishes only the
+geometric origin of the characteristic transition scale.
+
+% ==========================================================
+\section{Weak Lensing and Survey Observables}
+% ==========================================================
+
+Weak gravitational lensing depends on the combined lensing potential
+\begin{equation}
+  \Phi_{\mathrm{lens}}
+  =
+  \frac{\Phi + \Psi}{2}.
+\end{equation}
+Because both metric potentials inherit the relaxation scale, lensing
+observables also become sensitive to
+\begin{equation}
+  k_{\mathrm{rel}}.
+\end{equation}
+
+The same scale is expected to appear in
+\begin{itemize}
+  \item cosmic shear,
+  \item lensing convergence spectra,
+  \item weak-lensing tomography,
+  \item Euclid-scale survey analyses.
+\end{itemize}
+The relaxation scale therefore acts as a common geometric thread connecting
+multiple observational sectors.
+
+% ==========================================================
+\section{The Unified Role of the Relaxation Scale}
+% ==========================================================
+
+The analysis of this Companion reveals an important structural result. The
+quantity
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}})
+\end{equation}
+appears simultaneously in
+\begin{itemize}
+  \item tensor damping,
+  \item stochastic gravitational-wave spectra,
+  \item growth suppression,
+  \item growth indices,
+  \item redshift-space distortions,
+  \item weak lensing,
+  \item gravitational slip.
+\end{itemize}
+Rather than introducing separate scales for each of these phenomena, RDCC
+identifies a single common origin in the freeze-out geometry of the
+relaxation sector. The relaxation scale therefore represents a geometric
+transition scale rather than an arbitrary fit parameter.
+
+% ==========================================================
+\section{Open Problems}
+% ==========================================================
+
+Although the origin of the relaxation scale has been clarified significantly,
+several questions remain open.
+\begin{enumerate}[label=\arabic*.]
+  \item A complete derivation of
+  \begin{equation}
+    c_{\mathrm{eff}}
+    =
+    f\big(c_{s,+},\, c_{s,-},\, \rho_{(+)},\, \rho_{(-)}\big)
+  \end{equation}
+  remains unavailable.
+
+  \item The numerical evaluation of
+  \begin{equation}
+    k_{\mathrm{rel}}
+    =
+    a_{\mathrm{fr}} H(a_{\mathrm{fr}})
+  \end{equation}
+  within the Phase-1 integrated background cosmology has not yet been carried
+  out.
+
+  \item The exact relationship between the horizon and filter interpretations
+  of the relaxation scale remains to be fully established.
+
+  \item The detailed propagation of the relaxation scale into the Boltzmann
+  hierarchy will be developed in the modernized version of Companion~VII.
+\end{enumerate}
+These open questions do not invalidate the geometric interpretation developed
+here, but instead define the next stage of the RDCC research program.
+
+% ==========================================================
+\section{Conclusion}
+% ==========================================================
+
+This Companion establishes the theoretical origin of the RDCC relaxation
+scale. Rather than treating \(k_{\mathrm{rel}}\) as an independent
+phenomenological parameter, the scale is reinterpreted as a consequence of the
+freeze-out geometry of the relaxation sector.
+
+The central result is
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}),
+\end{equation}
+where
+\begin{equation}
+  a_{\mathrm{fr}} \simeq 10^{-4}
+\end{equation}
+marks the transition from relaxation-dominated evolution to the
+post-relaxation regime.
+
+The relaxation scale therefore provides a common bridge between the tensor
+sector, large-scale-structure formation, gravitational lensing, redshift-space
+distortions, and future survey observables. Together with Companion~II,
+Companion~VI, and Companion~XI, the present Companion closes one of the
+principal conceptual gaps of the RDCC framework and establishes the foundation
+required for the modernization of Companion~VII and Companion~XLIV.
+
+\end{document}

@@ -1,0 +1,335 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Relaxation-Driven Cyclic Cosmology (RDCC)}\\[0.2cm]
+\textbf{The Flagship Paper (v49.1)}\\[0.2cm]
+\large A Globally Coherent CPT-Symmetric Cosmological Framework}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+Relaxation-Driven Cyclic Cosmology (RDCC) describes the Universe as a globally
+coherent CPT-symmetric quantum state defined on a bipartite Hilbert space.
+The visible and mirror sectors arise as reduced density matrices of a single
+global state. Their thermodynamic arrows of time point in opposite directions,
+ensuring global CPT invariance.
+
+The ultraviolet-suppressed dimension-8 operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$
+provides the microscopic origin of relaxation. Its infrared response defines the
+relaxation parameter $\alpha(t)$, which saturates at the infrared fixpoint
+$\alpha_{\mathrm{IR}}$. This single parameter governs all observable deviations
+from $\Lambda$CDM: scalar tilt, relativistic species, growth suppression,
+tensor-mode interference, and log-periodic modulation.
+
+This Flagship Paper presents the complete RDCC framework: the global CPT state,
+the bipartite Hilbert-space structure, the nonsingular bounce, the thermodynamic
+time arrows, the relaxation dynamics, the infrared fixed point, the sectoral
+projection, the origin of dark-matter phenomenology, the tensor interference,
+and the unified prediction vector. Together with the Companions, this paper
+provides a fully self-contained, stand-alone cosmological theory.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+Relaxation-Driven Cyclic Cosmology (RDCC) is a one-parameter cosmology. All
+observable deviations from $\Lambda$CDM arise from the infrared relaxation
+strength $\alpha_{\mathrm{IR}}$, which quantifies the residual loss of global
+coherence after the CPT-symmetric bounce.
+
+RDCC consists of:
+\begin{itemize}[leftmargin=0.8cm]
+  \item a global CPT-symmetric quantum state,
+  \item a bipartite Hilbert-space structure,
+  \item a nonsingular bounce,
+  \item thermodynamic time arrows,
+  \item ultraviolet-suppressed relaxation dynamics,
+  \item an infrared fixed point,
+  \item sectoral projection,
+  \item mirror-sector halo physics,
+  \item tensor-sector interference,
+  \item a unified prediction vector.
+\end{itemize}
+
+This Flagship Paper presents the complete theory in its corrected and
+Phase-1-integrated v49.1 form.
+% ========================================================
+% 2 GLOBAL CPT-SYMMETRIC STATE
+% ========================================================
+
+\section{Global CPT-Symmetric State}
+
+RDCC describes the Universe as a pure global state:
+\begin{equation}
+|\Psi\rangle
+=
+\sum_i \lambda_i\,|i\rangle_{(+)} \otimes |i\rangle_{(-)},
+\end{equation}
+invariant under CPT:
+\begin{equation}
+\Theta|\Psi\rangle = |\Psi\rangle.
+\end{equation}
+
+The bounce is the CPT fixed point:
+\begin{equation}
+\rho_{(+)}(t_b) = \rho_{(-)}(t_b),
+\qquad
+\alpha(t_b) = 0.
+\end{equation}
+% ========================================================
+% 3 BIPARTITE HILBERT SPACE
+% ========================================================
+
+\section{Bipartite Hilbert Space}
+
+The global Hilbert space factorizes:
+\begin{equation}
+\mathcal{H}
+=
+\mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)}.
+\end{equation}
+
+The visible sector evolves forward in thermodynamic time; the mirror sector
+evolves backward.
+
+The sectoral observer measures:
+\begin{equation}
+\rho_{(+)}
+=
+\mathrm{Tr}_{(-)}(|\Psi\rangle\langle\Psi|),
+\end{equation}
+which is mixed due to entanglement.
+% ========================================================
+% 4 THE NONSINGULAR BOUNCE
+% ========================================================
+
+\section{The Nonsingular Bounce}
+
+The bounce is a geometric and thermodynamic pivot:
+\begin{itemize}[leftmargin=0.8cm]
+  \item maximal entanglement,
+  \item minimal scale factor,
+  \item vanishing relaxation parameter,
+  \item CPT symmetry fully manifest.
+\end{itemize}
+
+Post-bounce evolution begins from a perfectly symmetric configuration.
+% ========================================================
+% 5 THERMODYNAMIC TIME ARROWS
+% ========================================================
+
+\section{Thermodynamic Time Arrows}
+
+The visible sector follows the forward thermodynamic arrow:
+\begin{itemize}[leftmargin=0.8cm]
+  \item entropy increases,
+  \item matter condenses,
+  \item galaxies form.
+\end{itemize}
+
+The mirror sector follows the backward thermodynamic arrow:
+\begin{itemize}[leftmargin=0.8cm]
+  \item entropy decreases,
+  \item matter does not condense,
+  \item diffuse halo configurations persist.
+\end{itemize}
+% ========================================================
+% 6 ULTRAVIOLET SECTOR AND DIMENSION-8 OPERATOR
+% ========================================================
+
+\section{Ultraviolet Sector and Dimension-8 Operator}
+
+The inter-sector coupling is encoded in the operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu},
+\end{equation}
+which has mass dimension 8:
+\begin{equation}
+[T^{(+)}_{\mu\nu} T^{(-)\mu\nu}] = 8.
+\end{equation}
+
+The effective action contains:
+\begin{equation}
+S_{\mathrm{int}}
+=
+\int d^4x \sqrt{-g} \,
+\frac{1}{M^4} \,
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\end{equation}
+% --------------------------------------------------------
+% 6.1 Possible UV Completion: Massive Spin-2 Mediator
+% --------------------------------------------------------
+
+\subsection{Possible UV Completion: Massive Spin-2 Mediator}
+
+The dimension-8 operator can be interpreted as the infrared footprint of a
+heavy ultraviolet mediator. In effective field theory, operators coupling two
+energy-momentum tensors typically arise from integrating out a massive spin-2
+field at tree level.
+
+A massive spin-2 state $X_{\mu\nu}$ couples universally:
+\begin{equation}
+\mathcal{L}_{\mathrm{int}}
+=
+\frac{1}{M} X_{\mu\nu}
+\left(
+T^{(+)\mu\nu}
++
+T^{(-)\mu\nu}
+\right).
+\end{equation}
+
+Integrating out $X_{\mu\nu}$ generates:
+\begin{equation}
+\mathcal{O}_{\mathrm{eff}}
+=
+\frac{1}{M^4}
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\end{equation}
+
+This mechanism is optional but provides a natural ultraviolet origin consistent
+with RDCC’s geometric structure.
+% ========================================================
+% 7 RELAXATION DYNAMICS
+% ========================================================
+
+\section{Relaxation Dynamics}
+
+Relaxation is a geometric infrared response:
+\begin{equation}
+\alpha(t) = \frac{1}{M^4}\,\mathcal{G}(t),
+\end{equation}
+with RG flow:
+\begin{equation}
+\dot{\alpha}(t) = -\Gamma_{\mathrm{IR}}\,\alpha(t).
+\end{equation}
+
+Solution:
+\begin{equation}
+\alpha(t)
+=
+\alpha_{\mathrm{IR}}
++
+(\alpha_0 - \alpha_{\mathrm{IR}}) e^{-\Gamma_{\mathrm{IR}} t}.
+\end{equation}
+% ========================================================
+% 8 INFRARED FIXED POINT
+% ========================================================
+
+\section{Infrared Fixed Point}
+
+The infrared fixpoint is:
+\begin{equation}
+\alpha_{\mathrm{IR}} = \lim_{t\to\infty} \alpha(t).
+\end{equation}
+
+It controls all deviations from $\Lambda$CDM:
+\begin{align}
+n_s - 1 &\sim -2\alpha_{\mathrm{IR}}, \\
+\Delta N_{\mathrm{eff}} &\sim \alpha_{\mathrm{IR}}, \\
+\Delta(f\sigma_8) &\sim \alpha_{\mathrm{IR}}, \\
+\Omega_{\mathrm{GW}} &\propto \alpha_{\mathrm{IR}}^2.
+\end{align}
+% ========================================================
+% 9 SECTORAL PROJECTION AND DARK-MATTER PHENOMENOLOGY
+% ========================================================
+
+\section{Sectoral Projection and Dark-Matter Phenomenology}
+
+The mirror sector forms diffuse, non-compact halos due to its reversed
+thermodynamic arrow. The visible sector perceives:
+\begin{itemize}[leftmargin=0.8cm]
+  \item compact baryonic structures,
+  \item diffuse mirror-sector halos,
+  \item gravitational influence of both sectors.
+\end{itemize}
+
+The apparent 5:1 ratio is a projection effect.
+% ========================================================
+% 10 TENSOR INTERFERENCE
+% ========================================================
+
+\section{Tensor Interference}
+
+Tensor modes of the two sectors interfere, producing:
+\begin{itemize}[leftmargin=0.8cm]
+  \item quadratic suppression of amplitude,
+  \item log-periodic modulation of the spectrum.
+\end{itemize}
+
+These signatures are unique to RDCC.
+% ========================================================
+% 11 UNIFIED PREDICTION VECTOR
+% ========================================================
+
+\section{Unified Prediction Vector}
+
+RDCC predicts:
+\begin{equation}
+\mathcal{O}_{\mathrm{RDCC}}
+=
+\bigl(
+n_s,\,
+\Delta N_{\mathrm{eff}},\,
+f\sigma_8,\,
+\Omega_{\mathrm{GW}},\,
+\omega_{\mathrm{mod}}
+\bigr),
+\end{equation}
+with:
+\begin{align}
+n_s - 1 &= -2\alpha_{\mathrm{IR}}, \\
+\Delta N_{\mathrm{eff}} &= C_1\alpha_{\mathrm{IR}}, \\
+\frac{\Delta(f\sigma_8)}{f\sigma_8} &= C_2\alpha_{\mathrm{IR}}, \\
+\Omega_{\mathrm{GW}} &= C_3\alpha_{\mathrm{IR}}^2, \\
+\omega_{\mathrm{mod}} &= C_4\alpha_{\mathrm{IR}}.
+\end{align}
+% ========================================================
+% 12 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+RDCC provides a globally coherent, CPT-symmetric, bipartite description of the
+Universe. The relaxation parameter $\alpha_{\mathrm{IR}}$ governs all observable
+deviations from $\Lambda$CDM. The theory is sharply predictive, structurally
+complete, and empirically falsifiable.
+
+\end{document}

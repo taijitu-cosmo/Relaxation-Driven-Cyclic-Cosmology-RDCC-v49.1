@@ -1,0 +1,234 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion VIII (v49.1)}\\[0.2cm]
+\textbf{Likelihood Structure and Global Survey Interface}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the corrected likelihood structure of RDCC in its
+Phase-1-integrated v49.1 form. The global survey interface combines CMB, BAO,
+RSD multipoles, supernovae, and gravitational-wave observables into a single
+covariant likelihood. The covariance matrix encodes cross-correlations between
+visible and mirror-sector contributions and incorporates the dimension-8
+inter-sector operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$. The coefficients
+$C_1$–$C_4$ are fixed theoretical factors of order unity rather than fit
+parameters. This Companion provides the statistical backbone of RDCC and
+connects the theoretical framework to observational data.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+RDCC is a global framework. Its observational interface must therefore be
+constructed in a way that respects the bipartite Hilbert space structure and
+the global CPT symmetry. The likelihood must combine all relevant probes:
+\begin{itemize}[leftmargin=0.8cm]
+  \item CMB temperature and polarization,
+  \item BAO distance measurements,
+  \item RSD multipoles,
+  \item type Ia supernovae,
+  \item gravitational-wave observables.
+\end{itemize}
+
+In v49.1, the likelihood structure is corrected to:
+\begin{itemize}[leftmargin=0.8cm]
+  \item treat $C_1$–$C_4$ as fixed theoretical factors,
+  \item incorporate the dimension-8 inter-sector operator,
+  \item encode cross-correlations between visible and mirror-sector
+        contributions,
+  \item remain fully EFT-coherent and statistically consistent.
+\end{itemize}
+
+This Companion develops the global likelihood structure and its connection to
+the RDCC parameter space.
+% ========================================================
+% 2 GLOBAL DATA VECTOR
+% ========================================================
+
+\section[Global Data Vector]{Global Data Vector}
+
+The global data vector is defined as
+\begin{equation}
+\mathbf{d}
+=
+\begin{pmatrix}
+\mathbf{d}_{\mathrm{CMB}} \\
+\mathbf{d}_{\mathrm{BAO}} \\
+\mathbf{d}_{\mathrm{RSD}} \\
+\mathbf{d}_{\mathrm{SN}} \\
+\mathbf{d}_{\mathrm{GW}}
+\end{pmatrix},
+\end{equation}
+where each block contains the corresponding observables:
+\begin{itemize}[leftmargin=0.8cm]
+  \item $\mathbf{d}_{\mathrm{CMB}}$: temperature and polarization spectra,
+  \item $\mathbf{d}_{\mathrm{BAO}}$: distance indicators,
+  \item $\mathbf{d}_{\mathrm{RSD}}$: multipoles of the power spectrum,
+  \item $\mathbf{d}_{\mathrm{SN}}$: luminosity distances,
+  \item $\mathbf{d}_{\mathrm{GW}}$: stochastic gravitational-wave background
+        and standard sirens.
+\end{itemize}
+
+The theoretical prediction is
+\begin{equation}
+\mathbf{t}(\boldsymbol{\theta})
+\end{equation}
+with parameter vector $\boldsymbol{\theta}$ containing:
+\begin{itemize}[leftmargin=0.8cm]
+  \item standard cosmological parameters,
+  \item RDCC-specific parameters (e.g. $\alpha_{\mathrm{IR}}$),
+  \item survey nuisance parameters.
+\end{itemize}
+% ========================================================
+% 3 COVARIANCE MATRIX
+% ========================================================
+
+\section[Covariance Matrix]{Covariance Matrix}
+
+The covariance matrix is defined as
+\begin{equation}
+\mathbf{C}
+=
+\begin{pmatrix}
+\mathbf{C}_{\mathrm{CMB}} & \mathbf{X}_{\mathrm{CMB-BAO}} & \cdots \\
+\mathbf{X}_{\mathrm{BAO-CMB}} & \mathbf{C}_{\mathrm{BAO}} & \cdots \\
+\vdots & \vdots & \ddots
+\end{pmatrix},
+\end{equation}
+where:
+\begin{itemize}[leftmargin=0.8cm]
+  \item $\mathbf{C}_{\mathrm{CMB}}$ is the CMB covariance,
+  \item $\mathbf{C}_{\mathrm{BAO}}$ is the BAO covariance,
+  \item $\mathbf{C}_{\mathrm{RSD}}$ is the RSD covariance,
+  \item $\mathbf{C}_{\mathrm{SN}}$ is the supernova covariance,
+  \item $\mathbf{C}_{\mathrm{GW}}$ is the gravitational-wave covariance,
+  \item $\mathbf{X}_{\mathrm{CMB-BAO}}$, etc., encode cross-correlations.
+\end{itemize}
+
+The dimension-8 operator contributes to the covariance through geometric
+corrections,
+\begin{equation}
+\mathbf{C}
+=
+\mathbf{C}^{(0)}
++
+\frac{C_2}{M^4} \, \mathbf{C}^{(\mathrm{int})},
+\end{equation}
+where $C_2$ is a fixed theoretical factor of order unity.
+% ========================================================
+% 4 LIKELIHOOD FUNCTION
+% ========================================================
+
+\section[Likelihood Function]{Likelihood Function}
+
+The likelihood is defined as
+\begin{equation}
+\mathcal{L}(\boldsymbol{\theta})
+=
+\exp\left(
+-\frac{1}{2}
+\Delta\mathbf{d}^{\mathrm{T}}
+\mathbf{C}^{-1}
+\Delta\mathbf{d}
+\right),
+\end{equation}
+with residual vector
+\begin{equation}
+\Delta\mathbf{d}
+=
+\mathbf{d}
+-
+\mathbf{t}(\boldsymbol{\theta}).
+\end{equation}
+
+The RDCC-specific parameters enter through:
+\begin{itemize}[leftmargin=0.8cm]
+  \item the modified Boltzmann hierarchy (Companion VII),
+  \item the relaxation geometry (Companion VI),
+  \item the tensor sector (Companion II and XI),
+  \item the thermodynamic sector (Companion IV),
+  \item the ultraviolet sector (Companion X).
+\end{itemize}
+% ========================================================
+% 5 ROLE OF C-COEFFICIENTS
+% ========================================================
+
+\section[Role of C coefficients]{Role of $C_1$–$C_4$ Coefficients}
+
+The coefficients $C_1$–$C_4$ appear in:
+\begin{itemize}[leftmargin=0.8cm]
+  \item the covariant Poisson equation (Companion VII),
+  \item the covariance matrix corrections,
+  \item the survey interface (Companion XII).
+\end{itemize}
+
+They satisfy
+\begin{align}
+C_1 &\sim \mathcal{O}(1), \\
+C_2 &\sim \mathcal{O}(1), \\
+C_3 &\sim \mathcal{O}(1), \\
+C_4 &\sim \mathcal{O}(1),
+\end{align}
+and are fixed theoretical factors, not fit parameters. Their values arise from
+the global geometric structure and the dimension-8 operator.
+% ========================================================
+% 6 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected likelihood structure of RDCC in its
+v49.1 form. The global survey interface combines CMB, BAO, RSD multipoles,
+supernovae, and gravitational-wave observables into a single covariant
+likelihood. The covariance matrix encodes cross-correlations between visible
+and mirror-sector contributions and incorporates the dimension-8 inter-sector
+operator.
+
+The coefficients $C_1$–$C_4$ are fixed theoretical factors of order unity,
+ensuring that the statistical structure is fully determined by the global
+geometry. These results integrate the Boltzmann hierarchy (Companion VII), the
+relaxation sector (Companion III and VI), the ultraviolet sector (Companion X),
+and the survey interface (Companion XII). They form the backbone of RDCC’s
+connection to observational data and parameter estimation (Companion IX).
+
+\end{document}

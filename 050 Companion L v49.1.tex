@@ -1,0 +1,311 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PREAMBLE
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{authblk}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+\title{\textbf{Companion L (v49.1)}\\[0.2cm]
+\textbf{The Growth Index in the Relaxation-Driven Cyclic Cosmology}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The growth index \(\gamma\) provides a compact description of the dynamical
+evolution of cosmic structure. In the standard cosmological model, \(\gamma\)
+is nearly constant, reflecting the scale-independent growth of density
+perturbations. In previous versions of RDCC the growth index was written with
+an inserted relaxation scale. In the present Phase-1 integrated version this
+scale is inherited from the freeze-out geometry of Companion XII,
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\). The resulting
+scale-dependent and time-dependent growth index traces the same geometric
+transition that governs tensor damping, gravitational slip, and the Boltzmann
+hierarchy. This Companion develops the continuous description of \(\gamma\) in
+RDCC and identifies its signatures in redshift-space distortions, weak lensing,
+and velocity fields.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ---------------------------------------------------------
+\section{Introduction}
+% ---------------------------------------------------------
+
+The growth index \(\gamma\) is defined through the relation
+\begin{equation}
+  f(a)
+  =
+  \Omega_{m}(a)^{\gamma},
+\end{equation}
+where \(f(a)\) is the linear growth rate. In the standard cosmological model
+the growth index is nearly constant, with \(\gamma\approx 0.55\) for a Universe
+dominated by cold dark matter and a cosmological constant.
+
+In earlier versions of RDCC the gravitational potential was modified by a
+phenomenological scale \(k_{\mathrm{rel}}\). That description remains useful as
+a fitting template. In v49.1 the same scale is no longer independent: it is
+the comoving horizon scale at freeze-out. The growth index therefore becomes a
+probe of the freeze-out structure of the RDCC gravitational field rather than
+an extra parameter.
+
+% ---------------------------------------------------------
+\section{Connection to the Freeze-Out Geometry}
+% ---------------------------------------------------------
+
+Companion XII established the relaxation scale
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}),
+\end{equation}
+where
+\begin{equation}
+  a_{\mathrm{fr}}
+  \simeq
+  10^{-4}
+\end{equation}
+marks the freeze-out epoch of the global relaxation field.
+
+The growth hierarchy inherits this scale from the same relaxation geometry that
+governs tensor damping and gravitational slip. The growth index therefore
+probes the freeze-out structure of the RDCC Universe rather than an independent
+phenomenological scale.
+
+The resulting causal chain is
+\begin{equation}
+  \alpha
+  \;\rightarrow\;
+  a_{\mathrm{fr}}
+  \;\rightarrow\;
+  k_{\mathrm{rel}}
+  \;\rightarrow\;
+  D(k,a)
+  \;\rightarrow\;
+  f(k,a)
+  \;\rightarrow\;
+  \gamma(k,a).
+\end{equation}
+
+% ---------------------------------------------------------
+\section{The RDCC Growth Rate}
+% ---------------------------------------------------------
+
+The linear growth rate is defined as
+\begin{equation}
+  f(k,a)
+  =
+  \frac{d\ln D(k,a)}{d\ln a},
+\end{equation}
+where \(D(k,a)\) is the growth factor.
+
+In RDCC the growth factor evolves as
+\begin{equation}
+  D_{\mathrm{RDCC}}(k,a)
+  =
+  D(a)
+  \left[
+    1
+    -
+    \chi_{D}
+    \left(
+      \frac{k}{k_{\mathrm{rel}}}
+    \right)^{\alpha}
+  \right].
+\end{equation}
+The relaxation scale appearing in the growth factor is not introduced as an
+independent parameter. Within the Phase-1 integrated RDCC framework it is
+determined by the freeze-out geometry according to
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}).
+\end{equation}
+Consequently, the onset of growth suppression is linked directly to the
+physical freeze-out of the relaxation sector.
+
+The growth rate becomes
+\begin{equation}
+  f_{\mathrm{RDCC}}(k,a)
+  =
+  f(a)
+  \left[
+    1
+    -
+    \chi_{f}
+    \left(
+      \frac{k}{k_{\mathrm{rel}}}
+    \right)^{\alpha}
+  \right].
+\end{equation}
+The coefficients
+\begin{equation}
+  \chi_{D}
+  \qquad\text{and}\qquad
+  \chi_{f}
+\end{equation}
+parameterize the strength of the suppression. In the modern RDCC framework
+these amplitudes are no longer viewed as completely independent quantities.
+Instead, they are expected to be controlled by the same relaxation dynamics
+that generate the infrared parameter
+\begin{equation}
+  \alpha_{\mathrm{IR}}
+  =
+  0.0176 \pm 0.0021.
+\end{equation}
+A complete derivation of these amplitudes remains a subject for future work.
+
+This modification introduces a scale dependence that reflects the relaxation
+mechanism.
+
+% ---------------------------------------------------------
+\section{The RDCC Growth Index}
+% ---------------------------------------------------------
+
+The growth index is defined implicitly by
+\begin{equation}
+  f_{\mathrm{RDCC}}(k,a)
+  =
+  \Omega_{m}(a)^{\gamma_{\mathrm{RDCC}}(k,a)}.
+\end{equation}
+Solving for \(\gamma_{\mathrm{RDCC}}\) yields
+\begin{equation}
+  \gamma_{\mathrm{RDCC}}(k,a)
+  =
+  \frac{
+    \ln f(a)
+    +
+    \ln
+    \left[
+      1
+      -
+      \chi_{f}
+      \left(
+        \frac{k}{k_{\mathrm{rel}}}
+      \right)^{\alpha}
+    \right]
+  }{
+    \ln \Omega_{m}(a)
+  }.
+\end{equation}
+This expression shows that the growth index becomes scale-dependent and
+acquires a distinctive RDCC signature near the relaxation scale.
+
+% ---------------------------------------------------------
+\section{Scale Dependence and RDCC Signatures}
+% ---------------------------------------------------------
+
+In the standard cosmological model the growth index is nearly constant. In
+RDCC the scale dependence becomes
+\begin{equation}
+  \frac{\partial \gamma_{\mathrm{RDCC}}}{\partial k}
+  \propto
+  -
+  \chi_{f}\,
+  \alpha\,
+  \frac{k^{\alpha-1}}{k_{\mathrm{rel}}^{\alpha}}.
+\end{equation}
+This modification produces
+\begin{itemize}
+  \item a suppressed growth index at small scales,
+  \item an enhanced growth index at large scales,
+  \item a characteristic turnover near \(k_{\mathrm{rel}}\).
+\end{itemize}
+These signatures provide a direct observational probe of the relaxation scale.
+
+% ---------------------------------------------------------
+\subsection{Connection to the Relaxation Scale}
+% ---------------------------------------------------------
+
+The growth hierarchy shares its characteristic scale with multiple
+observational sectors of RDCC. The same relaxation scale appears in
+\begin{itemize}
+  \item tensor damping,
+  \item stochastic gravitational-wave spectra,
+  \item weak lensing,
+  \item redshift-space distortions,
+  \item gravitational slip.
+\end{itemize}
+The growth index therefore does not probe an isolated phenomenological
+parameter. Instead it probes the same freeze-out geometry that governs the
+global relaxation sector of the Universe.
+
+% ---------------------------------------------------------
+\section{Observational Probes}
+% ---------------------------------------------------------
+
+The growth index can be measured through several observables:
+\begin{itemize}
+  \item \textbf{Redshift-space distortions (RSD)} measure \(f\sigma_{8}\).
+  \item \textbf{Weak lensing} measures the combination \(f\Omega_{m}\).
+  \item \textbf{Velocity fields} measure the velocity divergence.
+  \item \textbf{Cluster abundance} depends on the growth history.
+\end{itemize}
+In RDCC all of these observables acquire a scale-dependent modification that
+reflects the relaxation mechanism. The growth index therefore provides a
+dynamical fingerprint of the RDCC gravitational field.
+
+% ---------------------------------------------------------
+\section{Conclusion}
+% ---------------------------------------------------------
+
+The growth index of RDCC is reinterpreted as a consequence of the freeze-out
+geometry of the relaxation sector. Rather than introducing the relaxation
+scale as an independent phenomenological parameter, the present framework
+adopts
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}),
+\end{equation}
+where
+\begin{equation}
+  a_{\mathrm{fr}}
+  \simeq
+  10^{-4}
+\end{equation}
+denotes the freeze-out epoch.
+
+The resulting causal chain is
+\begin{equation}
+  \alpha
+  \;\rightarrow\;
+  a_{\mathrm{fr}}
+  \;\rightarrow\;
+  k_{\mathrm{rel}}
+  \;\rightarrow\;
+  D(k,a)
+  \;\rightarrow\;
+  f(k,a)
+  \;\rightarrow\;
+  \gamma(k,a).
+\end{equation}
+The growth index therefore becomes a direct observable probe of the freeze-out
+structure of the RDCC Universe.
+
+Together with Companion XII, Companion VII, and Companion XLIV, the present
+Companion establishes the connection between global relaxation dynamics and
+the observable growth of cosmic structure.
+
+\end{document}

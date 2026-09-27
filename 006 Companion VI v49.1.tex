@@ -1,0 +1,196 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion VI (v49.1)}\\[0.2cm]
+\textbf{Relaxation Geometry and Infrared Structure}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the geometric interpretation of relaxation in RDCC.
+The relaxation parameter $\alpha(t)$ is a global infrared quantity arising from
+the ultraviolet-suppressed dimension-8 operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$.
+Relaxation is not a sectoral process but a geometric response of the global
+metric. We derive the geometric origin of $\alpha(t)$, establish its infrared
+fixpoint $\alpha_{\mathrm{IR}}$, and explain how relaxation modulates scalar
+and tensor perturbations. This Companion integrates the ultraviolet sector
+(Companion X), the relaxation sector (Companion III), and the tensor-relaxation
+coupling (Companion XI).
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+Relaxation in RDCC is not a thermodynamic process. It is a geometric response
+of the global metric to the ultraviolet-suppressed coupling between the visible
+and mirror sectors. The relaxation parameter $\alpha(t)$ is globally defined
+and arises from the inter-sector operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\end{equation}
+
+In earlier versions (up to v48.0), relaxation was interpreted as a sectoral
+process. In v49.1, this interpretation is corrected: relaxation is a global
+geometric effect that modulates scalar and tensor perturbations and saturates
+in the infrared due to RG flow.
+
+This Companion develops the geometric structure of relaxation in a form that is
+mathematically precise, physically transparent, and fully compatible with the
+global structure of RDCC.
+% ========================================================
+% 2 GEOMETRIC ORIGIN OF RELAXATION
+% ========================================================
+
+\section[Geometric Origin of alpha(t)]{Geometric Origin of $\alpha(t)$}
+
+Relaxation arises from the geometric contraction of the global metric with the
+dimension-8 operator,
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\end{equation}
+
+The effective action contains
+\begin{equation}
+S_{\mathrm{int}}
+=
+\int d^4x \sqrt{-g} \,
+\frac{1}{M^4} \,
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\label{eq:dim8action}
+\end{equation}
+
+The relaxation parameter is defined as the geometric response of the global
+metric to this operator,
+\begin{equation}
+\alpha(t) = \frac{1}{M^4} \, \mathcal{G}(t),
+\end{equation}
+where $\mathcal{G}(t)$ encodes the infrared geometry of the global state.
+
+\subsection[Global Definition]{Global Definition}
+
+Relaxation is globally defined:
+\begin{equation}
+\alpha(t) = \alpha_{\mathrm{global}}(t).
+\end{equation}
+
+The visible and mirror sectors measure $\alpha(t)$ only through projection.
+% ========================================================
+% 3 RG FLOW AND INFRARED FIXPOINT
+% ========================================================
+
+\section[RG Flow and Infrared Fixpoint]{RG Flow and Infrared Fixpoint}
+
+The geometric response saturates in the infrared due to RG flow,
+\begin{equation}
+\dot{\alpha}(t) = - \Gamma_{\mathrm{IR}} \, \alpha(t),
+\end{equation}
+with solution
+\begin{equation}
+\alpha(t) = \alpha_{\mathrm{IR}}
++
+\left( \alpha_0 - \alpha_{\mathrm{IR}} \right)
+e^{-\Gamma_{\mathrm{IR}} t}.
+\end{equation}
+
+The infrared fixpoint is
+\begin{equation}
+\alpha_{\mathrm{IR}} = \lim_{t \to \infty} \alpha(t).
+\end{equation}
+
+This fixpoint controls all deviations from $\Lambda$CDM:
+\begin{align}
+n_s - 1 &\sim -2\alpha_{\mathrm{IR}}, \\
+\Delta N_{\mathrm{eff}} &\sim \alpha_{\mathrm{IR}}, \\
+\Delta(f\sigma_8) &\sim \alpha_{\mathrm{IR}}, \\
+\Omega_{\mathrm{GW}} &\propto \alpha_{\mathrm{IR}}^2.
+\end{align}
+% ========================================================
+% 4 GEOMETRIC MODULATION OF PERTURBATIONS
+% ========================================================
+
+\section{Geometric Modulation of Perturbations}
+
+Relaxation modulates both scalar and tensor perturbations. The global metric
+responds to the inter-sector coupling, and this response is encoded in
+$\alpha(t)$.
+
+\subsection[Scalar Modes]{Scalar Modes}
+
+Scalar perturbations receive a correction proportional to $\alpha(t)$,
+\begin{equation}
+\Phi(k,t) = \Phi_{\Lambda\mathrm{CDM}}(k,t)
+\left[ 1 + \alpha(t) \right].
+\end{equation}
+
+\subsection[Tensor Modes]{Tensor Modes}
+
+Tensor modes receive a logarithmic modulation and quadratic suppression,
+\begin{equation}
+\Omega_{\mathrm{GW}}(k)
+=
+\Omega_{\mathrm{GW}}^{(0)}(k)
+\left[ 1 + \alpha_{\mathrm{IR}} \log(k/k_0) \right],
+\end{equation}
+with
+\begin{equation}
+\Omega_{\mathrm{GW}} \propto \alpha_{\mathrm{IR}}^2.
+\end{equation}
+
+These signatures are unique to RDCC and arise from the global coherence of
+tensor modes.
+% ========================================================
+% 5 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the geometric interpretation of relaxation in RDCC.
+Relaxation is a global infrared effect arising from the ultraviolet-suppressed
+dimension-8 operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$. The relaxation parameter
+$\alpha(t)$ is globally defined, saturates in the infrared due to RG flow, and
+controls all deviations from $\Lambda$CDM.
+
+These results integrate the relaxation sector (Companion III), the ultraviolet
+sector (Companion X), the tensor-relaxation coupling (Companion XI), and the
+Boltzmann hierarchy (Companion VII). Together, they establish the geometric
+foundation of RDCC’s infrared physics.
+
+\end{document}

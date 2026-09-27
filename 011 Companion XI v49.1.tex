@@ -1,0 +1,309 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+\title{\textbf{Companion XI (v49.1)}\\[0.2cm]
+\textbf{Background Cosmology and Modified Friedmann Equations}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Relaxation-Driven Cyclic Cosmology (RDCC) describes the Universe as a globally
+CPT-symmetric, bipartite quantum system whose observable deviations from
+\(\Lambda\)CDM are governed by a single infrared quantity: the relaxation
+parameter \(\alpha_{\mathrm{IR}}\). In v49.1 this parameter is promoted from a
+phenomenological constant to a geometric quantity arising from a dimension-8
+operator that modifies the large-scale structure of gravity. This Companion
+develops the background cosmology of RDCC in its Phase-1-integrated v49.1
+form. Starting from the global Einstein equation with the total stress-energy
+tensor \(T^{(+)}_{\mu\nu}+T^{(-)}_{\mu\nu}\), we derive the effective
+Friedmann equations as seen by a visible-sector observer, identify the
+mirror sector as a non-clustering, diffuse component that behaves as
+effective dark matter, and incorporate the geometric relaxation corrections
+into the expansion history and distance--redshift relations. The resulting
+background cosmology reproduces a \(\Lambda\)CDM-like expansion while
+encoding the RDCC-specific scale dependence in the perturbation sector.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+RDCC is built on the structural postulate that the global quantum state of
+the Universe is a CPT eigenstate,
+\begin{equation}
+  \Theta\,|\Psi_{\mathrm{CPT}}\rangle = |\Psi_{\mathrm{CPT}}\rangle.
+\end{equation}
+The minimal realization of such a state requires a bipartite Hilbert-space
+factorization,
+\begin{equation}
+  \mathcal{H} = \mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)},
+\end{equation}
+where \(\mathcal{H}_{(+)}\) describes the visible sector and
+\(\mathcal{H}_{(-)}\) its CPT-conjugate mirror sector.
+
+Gravity is the unique interaction that couples to the sum of both sectors.
+In v49.1 this global structure is retained, but the relaxation parameter is
+reinterpreted as a geometric correction arising from a dimension-8 operator
+that modifies the effective large-scale gravitational response. The purpose
+of this Companion is to construct the background cosmology of RDCC in
+v49.1: to derive the effective Friedmann equations, to identify the
+mirror-sector contribution to the expansion history, and to incorporate the
+geometric relaxation corrections into \(H(z)\) and cosmological distance
+measures.
+
+\section{Global Einstein equation and total stress-energy}
+
+\subsection{Two-sector action and global coupling}
+
+The global action of RDCC in v49.1 consists of the Einstein--Hilbert term,
+the matter actions of the two sectors, and a higher-dimensional geometric
+operator encoding relaxation:
+\begin{equation}
+  S
+  =
+  \frac{1}{16\pi G_N}
+  \int d^{4}x\,\sqrt{-g}\, R
+  +
+  S_{(+)}[g_{\mu\nu},\Phi_{(+)}]
+  +
+  S_{(-)}[g_{\mu\nu},\Phi_{(-)}]
+  +
+  S_{\mathrm{rel}}[g_{\mu\nu}].
+\end{equation}
+
+The total stress-energy tensor sourcing the metric is
+\begin{equation}
+  T^{\mathrm{tot}}_{\mu\nu}
+  =
+  T^{(+)}_{\mu\nu}
+  +
+  T^{(-)}_{\mu\nu}
+  +
+  T^{\mathrm{rel}}_{\mu\nu},
+\end{equation}
+with
+\begin{equation}
+  T^{\mathrm{rel}}_{\mu\nu}
+  =
+  -\frac{2}{\sqrt{-g}}
+  \frac{\delta S_{\mathrm{rel}}}{\delta g^{\mu\nu}}.
+\end{equation}
+
+Variation yields the global Einstein equation
+\begin{equation}
+  G_{\mu\nu}[g]
+  =
+  8\pi G_N
+  \left(
+    T^{(+)}_{\mu\nu}
+    +
+    T^{(-)}_{\mu\nu}
+    +
+    T^{\mathrm{rel}}_{\mu\nu}
+  \right).
+  \label{eq:globalEinstein}
+\end{equation}
+
+\subsection{Dimension-8 relaxation geometry}
+
+In v49.1 the relaxation parameter arises from a dimension-8 operator of the
+form
+\begin{equation}
+  \mathcal{L}_{\mathrm{rel}}
+  =
+  \frac{1}{M^{4}}\,
+  C^{\mu\nu\alpha\beta}
+  T^{(+)}_{\mu\nu} T^{(-)}_{\alpha\beta},
+\end{equation}
+where \(C^{\mu\nu\alpha\beta}\) is a \emph{dimensionless} geometric tensor.
+The operator has mass dimension 4, as required for a Lagrangian density.
+The effective modification of the Einstein tensor arises only after
+variation with respect to the metric:
+\begin{equation}
+  G_{\mu\nu}
+  \;\longrightarrow\;
+  G_{\mu\nu} + \alpha_{\mathrm{IR}}\,\Delta G_{\mu\nu}.
+\end{equation}
+
+At the background level, \(\Delta G_{\mu\nu}\) reduces to a small correction
+to the Friedmann equations.
+
+\section{Sectoral projection and effective FRW background}
+
+\subsection{FRW ansatz and sectoral energy densities}
+
+We assume a spatially flat FRW metric,
+\begin{equation}
+  ds^{2} = -dt^{2} + a^{2}(t)\, d\mathbf{x}^{2},
+\end{equation}
+with Hubble parameter \(H=\dot{a}/a\). The stress-energy tensors of the two
+sectors are modeled as perfect fluids,
+\begin{align}
+  T^{(+)}_{\mu\nu}
+  &=
+  (\rho_{(+)}+p_{(+)}) u_{\mu} u_{\nu} + p_{(+)} g_{\mu\nu},
+  \\
+  T^{(-)}_{\mu\nu}
+  &=
+  (\rho_{(-)}+p_{(-)}) u_{\mu} u_{\nu} + p_{(-)} g_{\mu\nu}.
+\end{align}
+
+Inserting these into Eq.~\eqref{eq:globalEinstein} yields the global
+Friedmann equations,
+\begin{align}
+  3H^{2}
+  &=
+  8\pi G_N
+  \left(
+    \rho_{(+)} + \rho_{(-)} + \rho_{\mathrm{rel}}
+  \right),
+  \label{eq:globalFriedmann1}
+  \\
+  2\dot{H} + 3H^{2}
+  &=
+  -8\pi G_N
+  \left(
+    p_{(+)} + p_{(-)} + p_{\mathrm{rel}}
+  \right).
+  \label{eq:globalFriedmann2}
+\end{align}
+
+\subsection{Visible-sector projection}
+
+A visible-sector observer measures only \(T^{(+)}_{\mu\nu}\) directly. The
+effective Friedmann equations become
+\begin{align}
+  3H^{2}
+  &=
+  8\pi G_{\mathrm{eff}}\, \rho_{(+)} + \Lambda_{\mathrm{eff}},
+  \label{eq:sectorFriedmann1}
+  \\
+  2\dot{H} + 3H^{2}
+  &=
+  -8\pi G_{\mathrm{eff}}\, p_{(+)}
+  - 8\pi G_N \left( p_{(-)} + p_{\mathrm{rel}} \right),
+  \label{eq:sectorFriedmann2}
+\end{align}
+with
+\begin{equation}
+  G_{\mathrm{eff}}
+  =
+  G_N
+  \left(
+    1
+    +
+    \frac{\rho_{(-)}}{\rho_{(+)}}
+    +
+    \frac{\rho_{\mathrm{rel}}}{\rho_{(+)}}
+  \right).
+  \label{eq:Geff}
+\end{equation}
+The effective coupling follows directly from the projection of the global
+Einstein equation onto the visible sector. A detailed derivation is given
+in Technical Note (v49.1): Effective Gravitational Coupling in RDCC. An
+earlier inverted expression for \(G_{\mathrm{eff}}\) is incompatible with
+Eq.~\eqref{eq:globalFriedmann1} and is superseded by Eq.~\eqref{eq:Geff}.
+The \(\Omega\)-form of \(H(z)\) below is unchanged.
+
+\section{Mirror sector as effective dark-matter component}
+
+\subsection{Thermodynamic blockade}
+
+The mirror sector contributes to the background expansion but does not
+cluster on observable scales. Its energy density behaves as a diffuse,
+non-clustering component:
+\begin{equation}
+  \rho_{\mathrm{DM,eff}} \equiv \rho_{(-)}.
+\end{equation}
+
+\section{Modified Friedmann equations and \texorpdfstring{\(H(z)\)}{H(z)}}
+
+\subsection{Background components}
+
+The global Friedmann equation becomes
+\begin{equation}
+  H^{2}(z)
+  =
+  H_0^{2}
+  \left[
+    \Omega_{\mathrm{b}}(1+z)^{3}
+    +
+    \Omega_{\mathrm{DM,eff}}(1+z)^{3}
+    +
+    \Omega_{\mathrm{rad}}(1+z)^{4}
+    +
+    \Omega_{\Lambda}^{\mathrm{eff}}
+    +
+    \delta_{\mathrm{rel}}(z)
+  \right],
+  \label{eq:Hofz}
+\end{equation}
+with
+\begin{equation}
+  \delta_{\mathrm{rel}}(z)
+  =
+  \alpha_{\mathrm{IR}}\, f_{\mathrm{rel}}(z).
+\end{equation}
+
+\section{Distance--redshift relations}
+
+\subsection{Comoving distance}
+
+\begin{equation}
+  \chi(z)
+  =
+  \int_0^{z} \frac{dz'}{H(z')}.
+\end{equation}
+
+To leading order in \(\alpha_{\mathrm{IR}}\),
+\begin{equation}
+  H(z)
+  =
+  H_{\Lambda\mathrm{CDM}}(z)
+  \bigl[
+    1 + \alpha_{\mathrm{IR}}\, \epsilon(z)
+  \bigr].
+\end{equation}
+
+\section{Conclusion}
+
+This Companion establishes the background cosmology of RDCC in v49.1.
+Gravity couples to the sum of both sectors, the mirror sector acts as a
+diffuse geometric component, and the infrared relaxation parameter
+introduces small, correlated corrections to the expansion history. The
+sectoral coupling \(G_{\mathrm{eff}}\) is that of Companion I, as
+consolidated in Technical Note (v49.1): Effective Gravitational Coupling
+in RDCC.
+
+Together with Companions I, III, IV, VI and VII, this Companion completes
+the background foundation of RDCC and prepares the ground for the full
+Boltzmann implementation and Euclid-oriented forecasting.
+
+\end{document}

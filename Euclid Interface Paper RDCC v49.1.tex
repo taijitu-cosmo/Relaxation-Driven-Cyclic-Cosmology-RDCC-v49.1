@@ -1,0 +1,359 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\title{\textbf{RDCC--Euclid Interface (v49.1)}\\[0.2cm]
+\large A Survey-Ready Framework for Testing Relaxation-Driven Cosmology}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+Euclid provides high-precision weak-lensing and galaxy-clustering measurements
+across a wide range of angular scales and redshifts. Relaxation-Driven Cyclic
+Cosmology (RDCC) predicts geometric, morphological, and topological signatures
+in these observables, all governed by the single infrared relaxation parameter
+\(\alpha_{\mathrm{IR}}\). In the Phase-1 integrated framework these signatures
+share one geometric origin: the freeze-out scale
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\) derived in Companion~XII.
+This Companion provides a survey-ready interface between RDCC and Euclid:
+(i)~a modernized v49.1 theoretical overview, (ii)~the mapping from RDCC
+signatures to Euclid observables, including growth, lensing, gravitational
+slip and topology, (iii)~Euclid-level forecasts for \(\alpha_{\mathrm{IR}}\),
+(iv)~degeneracy structure and multi-probe synergies, and (v)~a practical
+integration pathway for Euclid pipelines. A detailed Nomenclature section is
+included to ensure readability for Euclid scientists.
+\end{abstract}
+
+% ========================================================
+% NOMENCLATURE
+% ========================================================
+
+\section*{Nomenclature}
+
+\begin{tabular}{ll}
+\(\alpha_{\mathrm{IR}}\) & Infrared relaxation parameter; single cosmological
+parameter of RDCC \\[4pt]
+\(a_{\mathrm{fr}}\) & Freeze-out scale factor of the relaxation sector
+(\(\simeq 10^{-4}\)) \\[4pt]
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\) &
+Characteristic freeze-out scale governing growth suppression,
+tensor damping, and gravitational slip \\[4pt]
+\(\Phi\) & Gravitational potential of the visible sector \\[4pt]
+\(\Psi\) & Newtonian-gauge potential sourcing peculiar velocities \\[4pt]
+\(\Phi_{-}\) & Diffuse gravitational potential of the mirror sector \\[4pt]
+\(\Phi_{\mathrm{tot}}\) & Total lensing potential including diffuse shadow \\[4pt]
+\(\eta=\Phi/\Psi\) & Gravitational slip \\[4pt]
+\(\kappa\) & Weak-lensing convergence field \\[4pt]
+\(\gamma\) & Shear field \\[4pt]
+\(P_{\kappa}(\ell)\) & Convergence power spectrum \\[4pt]
+\(\mathrm{MF}_{i}\) & Minkowski functionals (area, boundary length,
+Euler characteristic) \\[4pt]
+\(\mathcal{D}\) & Persistence diagram (persistent homology) \\[4pt]
+\(W_{2}\) & Optimal-transport distance between persistence diagrams \\[4pt]
+\(f\sigma_8\) & Growth-rate observable \\[4pt]
+\(\Delta N_{\mathrm{eff}}\) & Dark-radiation excess \\[4pt]
+\(A_L\) & CMB-lensing amplitude \\[4pt]
+\(\sigma(\alpha_{\mathrm{IR}})\) & Forecasted uncertainty on
+\(\alpha_{\mathrm{IR}}\) \\[4pt]
+\(\Delta\log Z\) & Bayesian evidence contrast \\[4pt]
+\end{tabular}
+
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+Euclid's combination of weak lensing, galaxy clustering, tomography, and
+topological probes makes it uniquely suited to test RDCC. The theory predicts
+a set of correlated signatures across all Euclid observables, controlled by the
+single parameter \(\alpha_{\mathrm{IR}}\). These signatures arise from:
+\begin{itemize}
+  \item the diffuse gravitational shadow of the mirror sector,
+  \item scale-dependent suppression of the growth rate,
+  \item a scale-dependent gravitational slip,
+  \item mild modifications of the lensing potential,
+  \item geometric and topological distortions in the convergence field.
+\end{itemize}
+They are not independent phenomenological effects. They share the freeze-out
+scale of Companion~XII. This Companion provides a modernized v49.1 interface
+between RDCC and Euclid.
+
+% ========================================================
+% 2 RDCC OVERVIEW (v49.1)
+% ========================================================
+
+\section{RDCC Overview (v49.1)}
+
+RDCC describes the Universe as a globally coherent CPT-symmetric quantum state
+with two thermodynamic sectors. The infrared relaxation parameter
+\(\alpha_{\mathrm{IR}}\) quantifies the residual mismatch between the reduced
+density matrices of the sectors after the bounce.
+
+RDCC predicts:
+\begin{itemize}
+  \item a diffuse, non-clustering gravitational potential \(\Phi_{-}\),
+  \item scale-dependent suppression of \(f\sigma_8\) above \(k_{\mathrm{rel}}\),
+  \item a gravitational slip \(\eta=\Phi/\Psi\) that becomes scale-dependent
+        near \(k_{\mathrm{rel}}\),
+  \item mild enhancement of the lensing amplitude \(A_L\),
+  \item geometric and topological distortions in \(\kappa\).
+\end{itemize}
+These signatures are directly accessible to Euclid.
+
+% ========================================================
+% 3 GEOMETRIC ORIGIN OF EUCLID SIGNATURES
+% ========================================================
+
+\section{Geometric Origin of Euclid Signatures}
+
+The observable signatures of RDCC are not independent phenomenological
+effects. They originate from a common geometric sequence,
+\begin{equation}
+  \alpha
+  \;\rightarrow\;
+  a_{\mathrm{fr}}
+  \;\rightarrow\;
+  k_{\mathrm{rel}}
+  \;\rightarrow\;
+  \{D,\, f,\, \gamma,\, \eta,\, \Omega_{\mathrm{GW}}\}.
+\end{equation}
+The relaxation scale
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}})
+\end{equation}
+was derived in Companion~XII from the freeze-out geometry of the relaxation
+sector. Euclid therefore probes the same geometric transition that appears in
+growth suppression (Companions~VII and~L), tensor damping (Companion~XV), and
+gravitational slip (Companion~XLIV).
+
+% ========================================================
+% 4 RDCC SIGNATURES IN EUCLID OBSERVABLES
+% ========================================================
+
+\section{RDCC Signatures in Euclid Observables}
+
+\subsection{Lensing Potential}
+
+The total lensing potential is
+\begin{equation}
+  \Phi_{\mathrm{tot}}
+  =
+  \Phi + \Phi_{-},
+\end{equation}
+where \(\Phi_{-}\) is smooth and diffuse. In the RDCC framework the
+mirror-sector potential \(\Phi_{-}\) obeys a Poisson equation of the form
+\begin{equation}
+  \nabla^{2} \Phi_{-}
+  \propto
+  4\pi G\, \rho_{(-)}\, \delta_{(-)},
+\end{equation}
+as developed in Companion~VII, with the diffuse, non-clustering character of
+\(\rho_{(-)}\delta_{(-)}\) leading to a smooth contribution to the total
+lensing potential. This produces a mild enhancement in \(P_{\kappa}(\ell)\)
+and shifts peak and void statistics.
+
+\subsection{Growth-Rate Suppression}
+
+RDCC predicts
+\begin{equation}
+  f\sigma_8(k)
+  =
+  f\sigma_8^{\Lambda\mathrm{CDM}}
+  \left[
+    1 - \alpha_{\mathrm{IR}}\, \Theta(k - k_{\mathrm{rel}})
+  \right],
+\end{equation}
+where the Heaviside step function \(\Theta\) represents an idealized
+transition around the relaxation scale \(k_{\mathrm{rel}}\).
+
+The transition scale is fixed by
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}})
+\end{equation}
+and is therefore inherited from the freeze-out geometry rather than
+introduced phenomenologically.
+
+For Euclid-level implementations a smoothed transition function can be used,
+for example
+\begin{equation}
+  f\sigma_8(k)
+  =
+  f\sigma_8^{\Lambda\mathrm{CDM}}
+  \left[
+    1
+    -
+    \alpha_{\mathrm{IR}}\,
+    \frac{1}{2}
+    \left(
+      1 + \tanh\frac{k - k_{\mathrm{rel}}}{\Delta k}
+    \right)
+  \right],
+\end{equation}
+with a characteristic width \(\Delta k\) controlling the smoothness of the
+transition. Euclid's spectroscopic sample is highly sensitive to this
+signature.
+
+\subsection{Gravitational Slip}
+
+Companion~XLIV established that the gravitational slip arises from an
+effective anisotropic stress generated by the mirror sector and the
+relaxation geometry. The slip parameter
+\begin{equation}
+  \eta
+  =
+  \frac{\Phi}{\Psi}
+\end{equation}
+becomes scale dependent near
+\begin{equation}
+  k_{\mathrm{rel}}.
+\end{equation}
+Consequently, weak-lensing observables (\(\Phi+\Psi\)) and clustering or
+redshift-space-distortion observables (\(\Psi\)) provide complementary
+probes of the same freeze-out transition.
+
+\subsection{Geometric and Morphological Distortions}
+
+RDCC induces characteristic distortions in:
+\begin{itemize}
+  \item peak counts,
+  \item void distributions,
+  \item Minkowski functionals,
+  \item persistent homology diagrams.
+\end{itemize}
+These probes are robust against shape noise and survey systematics.
+
+\subsection{Topological Rearrangements}
+
+Persistent homology and optimal-transport distances \(W_{2}\) capture global
+topological rearrangements induced by \(\Phi_{-}\).
+
+% ========================================================
+% 5 EUCLID-LEVEL FORECASTS
+% ========================================================
+
+\section{Euclid-Level Forecasts}
+
+Euclid forecasts yield
+\begin{equation}
+  \sigma(\alpha_{\mathrm{IR}})
+  \sim
+  \mathcal{O}(10^{-2}),
+\end{equation}
+with strongest sensitivity from:
+\begin{itemize}
+  \item weak-lensing tomography,
+  \item peak and void statistics,
+  \item persistent homology,
+  \item transport-based topology,
+  \item combined multi-probe likelihoods.
+\end{itemize}
+The diffuse shadow contributes significantly to the Fisher information. The
+same forecasts constrain the location of the freeze-out scale
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\) once a numerical
+evaluation of that product on the Companion-XI background is available.
+
+% ========================================================
+% 6 DEGENERACY STRUCTURE AND SYNERGY
+% ========================================================
+
+\section{Degeneracy Structure and Synergy}
+
+RDCC variations can partially mimic shifts in \(\Lambda\)CDM parameters.
+Euclid breaks these degeneracies through:
+\begin{itemize}
+  \item tomographic binning,
+  \item cross-correlation with galaxy clustering,
+  \item topological probes orthogonal to \(\Lambda\)CDM manifolds,
+  \item multi-probe likelihoods.
+\end{itemize}
+
+The same relaxation scale is simultaneously constrained by
+\begin{itemize}
+  \item growth suppression,
+  \item weak lensing,
+  \item gravitational slip,
+  \item topological observables,
+  \item tensor observables.
+\end{itemize}
+Growth and RSD respond primarily to \(\Psi\); lensing responds to
+\((\Phi+\Psi)/2\); topology responds to the diffuse shadow \(\Phi_{-}\);
+the SGWB of Companion~XV responds to the same \(k_{\mathrm{rel}}\) through
+tensor damping. This multi-probe structure is the operational content of the
+geometric chain above.
+
+% ========================================================
+% 7 INTEGRATION INTO EUCLID PIPELINES
+% ========================================================
+
+\section{Integration into Euclid Pipelines}
+
+RDCC can be integrated into Euclid's analysis framework through:
+\begin{itemize}
+  \item \textbf{Forward modeling:}
+        modified lensing potential \(\Phi_{\mathrm{tot}}\) and a
+        scale-dependent slip \(\eta(k)\) in simulations.
+  \item \textbf{Summary statistics:}
+        extension of Euclid's pipeline to include peaks, Minkowski
+        functionals, persistent homology, and transport topology.
+  \item \textbf{Likelihood integration:}
+        modular addition of RDCC likelihood components sharing one
+        \(k_{\mathrm{rel}}\) and one \(\alpha_{\mathrm{IR}}\).
+  \item \textbf{Validation:}
+        RDCC Benchmark Suite for simulation-based calibration.
+\end{itemize}
+
+% ========================================================
+% 8 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+RDCC provides a theoretically motivated, observationally testable extension
+of \(\Lambda\)CDM. Its Euclid signatures are not a list of independent
+effects. They descend from
+\begin{equation}
+  \alpha
+  \;\rightarrow\;
+  a_{\mathrm{fr}}
+  \;\rightarrow\;
+  k_{\mathrm{rel}}
+  \;\rightarrow\;
+  \{D,\, f,\, \gamma,\, \eta,\, \Omega_{\mathrm{GW}}\}.
+\end{equation}
+Euclid-level forecasts demonstrate percent-level sensitivity to
+\(\alpha_{\mathrm{IR}}\) and can, once \(a_{\mathrm{fr}}H(a_{\mathrm{fr}})\)
+is evaluated numerically, test whether the observed transition scale
+coincides with the freeze-out geometry of Companion~XII. This Companion
+provides a survey-ready interface for Euclid collaborators and a practical
+pathway for testing relaxation-driven cosmology.
+
+\end{document}

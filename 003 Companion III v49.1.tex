@@ -1,0 +1,219 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion III (v49.1)}\\[0.2cm]
+\textbf{Relaxation Dynamics in a CPT-Symmetric Bipartite Universe}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the relaxation sector of RDCC in its corrected and
+fully EFT-coherent v49.1 form. The relaxation parameter $\alpha(t)$ arises
+from the ultraviolet-suppressed inter-sector operator
+$T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$, which is identified in v49.1 as a
+dimension-8 operator. This correction propagates through the infrared dynamics,
+the RG flow, and the Lindblad-like effective dissipator. We derive the global
+definition of $\alpha(t)$, establish its infrared fixpoint
+$\alpha_{\mathrm{IR}}$, and show how relaxation controls all deviations from
+$\Lambda$CDM. This Companion provides the mathematical and physical foundation
+for the thermodynamic sector (Companion IV), the ultraviolet sector (Companion X),
+and the tensor sector (Companion XIV).
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+Relaxation-Driven Cyclic Cosmology (RDCC) describes the Universe as a globally
+coherent CPT-symmetric quantum state defined on a bipartite Hilbert space,
+\begin{equation}
+\mathcal{H} = \mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)}.
+\end{equation}
+The visible and mirror sectors arise as reduced density matrices of a single
+global state. Their thermodynamic arrows of time point in opposite directions,
+ensuring global CPT invariance.
+
+The relaxation sector quantifies how the visible sector responds to the
+ultraviolet-suppressed coupling between both sectors. This coupling is encoded
+in the inter-sector operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu},
+\end{equation}
+which couples the energy-momentum tensors of both sectors through the global
+gravitational field.
+
+In earlier versions of RDCC (up to v48.0), this operator was implicitly treated
+as a dimension-6 operator. In v49.1, we correct this and consistently treat
+$\mathcal{O}_{\mathrm{int}}$ as a dimension-8 operator. This correction is
+crucial for EFT coherence and propagates through the entire relaxation sector.
+
+The goal of this Companion is to derive the corrected relaxation dynamics,
+establish the global definition of $\alpha(t)$, determine its infrared fixpoint
+$\alpha_{\mathrm{IR}}$, and present the Lindblad-like effective structure of
+the dissipator.
+% ========================================================
+% 2 DIMENSION-8 INTER-SECTOR OPERATOR
+% ========================================================
+
+\section{Dimension-8 Inter-Sector Operator}
+
+The energy-momentum tensor has mass dimension
+\begin{equation}
+[T_{\mu\nu}] = 4.
+\end{equation}
+Therefore, the inter-sector operator has mass dimension
+\begin{equation}
+[T^{(+)}_{\mu\nu} T^{(-)\mu\nu}] = 8.
+\end{equation}
+The corresponding term in the effective action is
+\begin{equation}
+S_{\mathrm{int}}
+=
+\int d^4x \sqrt{-g} \,
+\frac{1}{M^4} \,
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu}.
+\label{eq:dim8action}
+\end{equation}
+
+This correction ensures full EFT consistency. The scale $M$ parametrizes the
+strength of the coupling and is assumed to be much larger than all cosmological
+energy scales.
+% --------------------------------------------------------
+% 2.1 Global Definition of alpha(t)
+% --------------------------------------------------------
+
+\subsection[Global Definition of alpha(t)]{Global Definition of $\alpha(t)$}
+
+The relaxation parameter $\alpha(t)$ is defined globally on the bipartite
+Hilbert space. It is not a sectoral parameter; instead, it quantifies the
+infrared response of the global state to the ultraviolet-suppressed coupling.
+
+From Eq.~\eqref{eq:dim8action}, we obtain the scaling
+\begin{equation}
+\alpha(t) \propto \frac{1}{M^4}.
+\end{equation}
+
+The visible sector measures $\alpha(t)$ only indirectly through gravitational
+observables. The mirror sector measures it through its thermodynamic arrow.
+Both measurements correspond to projections of the same global parameter.
+% ========================================================
+% 3 RG FLOW AND INFRARED FIXPOINT
+% ========================================================
+
+\section{RG Flow and Infrared Fixpoint}
+
+The effective coupling saturates in the infrared due to the RG flow,
+\begin{equation}
+\dot{\alpha}(t) = - \Gamma_{\mathrm{IR}} \, \alpha(t),
+\end{equation}
+where $\Gamma_{\mathrm{IR}}$ is the infrared relaxation rate. The solution is
+\begin{equation}
+\alpha(t)
+=
+\alpha_{\mathrm{IR}}
++
+\left( \alpha_0 - \alpha_{\mathrm{IR}} \right)
+e^{-\Gamma_{\mathrm{IR}} t}.
+\end{equation}
+
+The infrared fixpoint is defined as
+\begin{equation}
+\alpha_{\mathrm{IR}} = \lim_{t \to \infty} \alpha(t).
+\end{equation}
+
+This fixpoint controls all deviations from $\Lambda$CDM:
+\begin{align}
+n_s - 1 &\sim -2\alpha_{\mathrm{IR}}, \\
+\Delta N_{\mathrm{eff}} &\sim \alpha_{\mathrm{IR}}, \\
+\Delta(f\sigma_8) &\sim \alpha_{\mathrm{IR}}, \\
+\Omega_{\mathrm{GW}} &\sim \alpha_{\mathrm{IR}}^2.
+\end{align}
+% ========================================================
+% 4 LINDBLAD-LIKE EFFECTIVE DISSIPATOR
+% ========================================================
+
+\section{Lindblad-Like Effective Dissipator}
+
+The ultraviolet-suppressed coupling induces an effective dissipator in the
+visible sector. The global state evolves according to
+\begin{equation}
+\dot{\rho}_{(+)} =
+- i [H_{(+)}, \rho_{(+)}]
++ \mathcal{D}_{\mathrm{eff}}[\rho_{(+)}],
+\end{equation}
+where the dissipator has the Lindblad-like form
+\begin{equation}
+\mathcal{D}_{\mathrm{eff}}[\rho]
+=
+\sum_{n} \gamma_n
+\left(
+L_n \rho L_n^\dagger
+- \frac{1}{2} \{ L_n^\dagger L_n, \rho \}
+\right).
+\end{equation}
+
+The coefficients $\gamma_n$ scale as
+\begin{equation}
+\gamma_n \propto \frac{1}{M^4},
+\end{equation}
+consistent with the dimension-8 suppression.
+
+This structure explains the thermodynamic asymmetry between the sectors and
+provides the microscopic origin of the relaxation dynamics.
+% ========================================================
+% 5 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected and fully EFT-coherent relaxation sector
+of RDCC. The identification of the inter-sector operator as a dimension-8
+operator restores ultraviolet consistency and provides the microscopic origin
+of the relaxation parameter $\alpha(t)$. The global definition of $\alpha(t)$,
+its infrared fixpoint $\alpha_{\mathrm{IR}}$, and the Lindblad-like effective
+structure of the dissipator form the backbone of RDCC's deviation from
+$\Lambda$CDM.
+
+These results propagate into the thermodynamic sector (Companion IV), the
+ultraviolet sector (Companion X), and the tensor sector (Companion XIV). The
+relaxation sector is therefore central to the physical interpretation and
+observational predictions of RDCC.
+
+\end{document}

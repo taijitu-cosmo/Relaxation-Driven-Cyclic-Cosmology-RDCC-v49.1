@@ -1,0 +1,233 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+\title{\textbf{Technical Note (v49.1)}\\[0.2cm]
+\textbf{Numerical Evaluation of the Relaxation Scale}\\[0.15cm]
+\large \(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\)
+from the Companion-XI background}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Companion XII defines the relaxation scale geometrically as the comoving
+horizon wavenumber at freeze-out,
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\). This note provides
+the numerical closure of that freeze-out relation and of the same scale
+subsequently used in Companions L, XV, XLIV and the RDCC--Euclid Interface.
+Evaluating the product on the Phase-1 background of Companion XI, with
+\(\Omega_m\simeq0.31\), \(\Omega_r h^2\simeq4.15\times10^{-5}\) and
+\(h\simeq0.67\), one finds
+\(k_{\mathrm{rel}}\simeq0.037\,h\,\mathrm{Mpc}^{-1}\) for the benchmark
+\(a_{\mathrm{fr}}=10^{-4}\), and
+\(k_{\mathrm{rel}}\simeq0.015\,h\,\mathrm{Mpc}^{-1}\) if freeze-out coincides
+with matter--radiation equality. Both values lie within a factor of a few of
+the historical working scale \(0.01\,h\,\mathrm{Mpc}^{-1}\). The residual
+uncertainty is dominated by \(a_{\mathrm{fr}}\), not by \(H(a)\). The
+relaxation correction \(\delta_{\mathrm{rel}}=\alpha_{\mathrm{IR}}f_{\mathrm{rel}}\)
+shifts the result only at the percent level.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+This note does not redefine freeze-out and does not introduce a new
+dynamical mechanism. It answers one question: given the geometric
+definition of Companion XII and the background of Companion XI, what
+number is \(k_{\mathrm{rel}}\)?
+
+The same \(k_{\mathrm{rel}}\) is the transition scale in the growth sector
+(Companions VII and L), the gravitational slip (Companion XLIV), tensor
+damping (Companion XV) and the Euclid interface. A numerical value is
+therefore the closure of that chain, not an extra parameter.
+
+\section{Definition}
+
+Companion XII identifies
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}),
+  \label{eq:def}
+\end{equation}
+with \(a_0=1\). Equation~\eqref{eq:def} is a comoving wavenumber. The Hubble
+parameter must therefore be converted with
+\begin{equation}
+  \frac{H_0}{c}
+  =
+  3.3356\times10^{-4}\, h\,\mathrm{Mpc}^{-1}.
+\end{equation}
+
+\section{Background from Companion XI}
+
+The working expansion history of Companion XI is
+\begin{equation}
+  H^2(a)
+  =
+  H_0^2
+  \Bigl[
+    \Omega_r a^{-4}
+    +
+    \Omega_m a^{-3}
+    +
+    \Omega_\Lambda
+    +
+    \delta_{\mathrm{rel}}(a)
+  \Bigr],
+\end{equation}
+where \(\Omega_m=\Omega_b+\Omega_{\mathrm{DM,eff}}\) and
+\begin{equation}
+  \delta_{\mathrm{rel}}(a)
+  =
+  \alpha_{\mathrm{IR}}\, f_{\mathrm{rel}}(a).
+\end{equation}
+With \(\alpha_{\mathrm{IR}}=0.0176\pm0.0021\), \(\delta_{\mathrm{rel}}\) is an
+\(\mathcal{O}(2\%)\) correction at freeze-out and is omitted from the leading
+table. Benchmark parameters:
+\begin{equation}
+  \Omega_m \simeq 0.31,
+  \qquad
+  h \simeq 0.67,
+  \qquad
+  \Omega_r h^2 \simeq 4.15\times10^{-5},
+  \qquad
+  \Omega_\Lambda \simeq 1-\Omega_m-\Omega_r.
+\end{equation}
+These imply
+\begin{equation}
+  \Omega_r \simeq 9.25\times10^{-5},
+  \qquad
+  a_{\mathrm{eq}}
+  =
+  \frac{\Omega_r}{\Omega_m}
+  \simeq
+  3.0\times10^{-4}.
+\end{equation}
+At \(a=10^{-4}\) radiation still dominates, but the matter term is already
+comparable (\(\Omega_r a^{-4}\sim9\times10^{11}\),
+\(\Omega_m a^{-3}\sim3\times10^{11}\)).
+
+\section{Numerical table}
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+\(a_{\mathrm{fr}}\) &
+\(H(a_{\mathrm{fr}})/H_0\) &
+\(a_{\mathrm{fr}}H/H_0\) &
+\(k_{\mathrm{rel}}\,[h\,\mathrm{Mpc}^{-1}]\) &
+comment \\
+\midrule
+\(5\times10^{-5}\) &
+\(4.16\times10^{6}\) &
+\(208\) &
+\(0.069\) &
+deep radiation era \\
+\(1\times10^{-4}\) &
+\(1.11\times10^{6}\) &
+\(111\) &
+\(0.037\) &
+XII benchmark \\
+\(2\times10^{-4}\) &
+\(3.11\times10^{5}\) &
+\(62\) &
+\(0.021\) &
+approaching equality \\
+\(a_{\mathrm{eq}}\simeq3.0\times10^{-4}\) &
+\(1.53\times10^{5}\) &
+\(46\) &
+\(0.015\) &
+matter--radiation equality \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Including \(\delta_{\mathrm{rel}}\sim\alpha_{\mathrm{IR}}\) multiplies every
+entry by \(1+\mathcal{O}(10^{-2})\) and does not change the table at the
+quoted precision.
+
+A plot of \(k_{\mathrm{rel}}(a_{\mathrm{fr}})\) against \(a_{\mathrm{fr}}\),
+with markers at the four rows above and a horizontal line at the historical
+value \(0.01\,h\,\mathrm{Mpc}^{-1}\), is deferred to a later figure; the
+table already contains the same information.
+
+\section{Comparison with the historical scale}
+
+Earlier RDCC documents used
+\begin{equation}
+  k_{\mathrm{rel}}^{\mathrm{(hist)}}
+  \sim
+  0.01\,h\,\mathrm{Mpc}^{-1}
+\end{equation}
+as a working value in growth, RSD and Euclid forecasts. The geometric
+evaluation yields
+\begin{equation}
+  k_{\mathrm{rel}}
+  \simeq
+  0.037\,h\,\mathrm{Mpc}^{-1}
+  \qquad
+  (a_{\mathrm{fr}}=10^{-4})
+\end{equation}
+and
+\begin{equation}
+  k_{\mathrm{rel}}
+  \simeq
+  0.015\,h\,\mathrm{Mpc}^{-1}
+  \qquad
+  (a_{\mathrm{fr}}=a_{\mathrm{eq}}).
+\end{equation}
+The mismatch is a factor \(\sim2\)--\(4\), not an order of magnitude. The
+historical number is essentially \(k_{\mathrm{eq}}\). The theory therefore
+does not fall out of the observational window. The dominant uncertainty is
+whether freeze-out sits at \(10^{-4}\) or nearer equality, that is, whether
+\(\beta(a_{\mathrm{fr}})=1\) is realized before or at \(a_{\mathrm{eq}}\).
+
+\section{Consequences}
+
+\begin{itemize}[leftmargin=0.8cm]
+  \item \textbf{Growth and Companion L.}
+        The turnover in \(D\), \(f\) and \(\gamma\) moves from
+        \(0.01\) to \(\sim0.02\)--\(0.04\,h\,\mathrm{Mpc}^{-1}\) unless
+        \(a_{\mathrm{fr}}\) is revised toward \(a_{\mathrm{eq}}\).
+  \item \textbf{Slip and Companion XLIV.}
+        The scale where \(\eta=\Phi/\Psi\) departs from unity is the same
+        number.
+  \item \textbf{Tensors and Companion XV.}
+        High-frequency SGWB suppression begins at this \(k_{\mathrm{rel}}\),
+        not at an independent tensor scale. The bounce scale \(k_b\) remains
+        distinct.
+  \item \textbf{Euclid.}
+        Forecast templates that inserted \(0.01\,h\,\mathrm{Mpc}^{-1}\) should
+        treat that value as a prior center, not as the XII prediction, until
+        \(a_{\mathrm{fr}}\) is derived from \(\beta(a)=1\).
+\end{itemize}
+
+\section{What this note does not decide}
+
+Equation~\eqref{eq:def} is evaluated, not re-derived. The note does not
+construct \(c_{\mathrm{eff}}\), does not fix \(\beta(a)\), and does not
+resolve the two expressions for \(G_{\mathrm{eff}}\) in Companions I and XI.
+Those tasks are separate. The immediate scientific content is the table:
+the geometric scale lands in the same decade as the old working value, and
+the remaining lever is \(a_{\mathrm{fr}}\).
+
+\end{document}

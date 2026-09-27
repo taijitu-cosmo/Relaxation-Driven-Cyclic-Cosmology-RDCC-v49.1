@@ -1,0 +1,280 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion X (v49.1)}\\[0.2cm]
+\textbf{Ultraviolet Sector and Dimension-8 Operator}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the ultraviolet sector of RDCC in its corrected and
+Phase-1-integrated v49.1 form. The inter-sector coupling between the visible
+and mirror sectors is encoded in the operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$,
+which is consistently treated as a dimension-8 operator. This correction
+restores EFT coherence, fixes the scaling of the relaxation parameter
+$\alpha(t)$, and determines the ultraviolet suppression scale $M$. We derive
+the ultraviolet structure of the effective action, its impact on infrared
+relaxation, and its role in the tensor and thermodynamic sectors.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+RDCC describes the Universe as a globally coherent CPT-symmetric quantum state
+defined on a bipartite Hilbert space,
+\begin{equation}
+\mathcal{H} = \mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)}.
+\end{equation}
+The visible and mirror sectors arise as reduced density matrices of a single
+global state and interact only through gravity.
+
+The ultraviolet sector encodes the microscopic origin of this interaction. In
+RDCC, the coupling between the sectors is described by the operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T^{(-)\mu\nu},
+\end{equation}
+which couples the energy-momentum tensors of both sectors through the global
+metric.
+
+In earlier versions (up to v48.0), this operator was implicitly treated as a
+dimension-6 operator. In v49.1, this interpretation is corrected: the operator
+is consistently treated as a dimension-8 operator. This correction is crucial
+for EFT coherence and propagates through the relaxation sector, the tensor
+sector, and the thermodynamic sector.
+% ========================================================
+% 2 DIMENSION-8 OPERATOR AND EFFECTIVE ACTION
+% ========================================================
+
+\section[Dimension-8 Operator]{Dimension-8 Operator and Effective Action}
+
+The energy-momentum tensor has mass dimension
+\begin{equation}
+[T_{\mu\nu}] = 4.
+\end{equation}
+Therefore, the inter-sector operator has mass dimension
+\begin{equation}
+[T^{(+)}_{\mu\nu} T^{(-)\mu\nu}] = 8.
+\end{equation}
+
+The corresponding term in the effective action is
+\begin{equation}
+S_{\mathrm{int}}
+=
+\int d^4x \sqrt{-g} \,
+\frac{1}{M^4} \,
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu},
+\label{eq:dim8action}
+\end{equation}
+where $M$ is the ultraviolet suppression scale. The factor $1/M^4$ ensures
+that the operator is properly normalized in the EFT sense.
+
+This term is the unique leading inter-sector coupling consistent with:
+\begin{itemize}[leftmargin=0.8cm]
+  \item general covariance,
+  \item CPT symmetry,
+  \item the bipartite Hilbert space structure,
+  \item the absence of direct non-gravitational interactions.
+\end{itemize}
+
+% --------------------------------------------------------
+% 2.1 Possible UV Completion: Massive Spin-2 Mediator
+% --------------------------------------------------------
+
+\subsection[Possible UV Completion]{Possible UV Completion: Massive Spin-2 Mediator}
+
+The dimension-8 operator
+\begin{equation}
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu}
+\end{equation}
+can be interpreted as the infrared footprint of a heavy ultraviolet mediator.
+In effective field theory, operators that couple two energy-momentum tensors
+typically arise from integrating out a massive spin-2 field at tree level.
+
+A massive spin-2 state $X_{\mu\nu}$ couples universally to the energy-momentum
+tensor,
+\begin{equation}
+\mathcal{L}_{\mathrm{int}}
+=
+\frac{1}{M} X_{\mu\nu}
+\left(
+T^{(+)\mu\nu}
++
+T^{(-)\mu\nu}
+\right),
+\end{equation}
+where $M$ is the mass of the mediator. Integrating out $X_{\mu\nu}$ at tree
+level generates the effective operator
+\begin{equation}
+\mathcal{O}_{\mathrm{eff}}
+=
+\frac{1}{M^4}
+T^{(+)}_{\mu\nu} T^{(-)\mu\nu},
+\end{equation}
+consistent with the dimension-8 structure used in RDCC.
+
+This interpretation is optional and does not affect the infrared physics of
+RDCC. It provides a natural ultraviolet origin for the operator, compatible
+with:
+\begin{itemize}[leftmargin=0.8cm]
+  \item general covariance,
+  \item CPT symmetry,
+  \item the bipartite Hilbert space structure,
+  \item and the geometric nature of the global metric.
+\end{itemize}
+
+A massive spin-2 mediator may be viewed as a Kaluza-Klein graviton, a geometric
+resonance, or a geon-like excitation of the ultraviolet gravitational sector.
+RDCC does not require a specific ultraviolet completion, but this mechanism
+illustrates how the dimension-8 operator can arise microscopically.
+
+% ========================================================
+% 3 ULTRAVIOLET SCALE AND EFT COHERENCE
+% ========================================================
+
+\section[Ultraviolet Scale]{Ultraviolet Scale and EFT Coherence}
+
+The scale $M$ parametrizes the strength of the inter-sector coupling. It is
+assumed to be much larger than all cosmological energy scales,
+\begin{equation}
+M \gg H_0, \quad M \gg T_{\mathrm{CMB}}, \quad M \gg \Lambda^{1/4}.
+\end{equation}
+
+The dimension-8 suppression ensures that:
+\begin{itemize}[leftmargin=0.8cm]
+  \item the coupling is negligible at high energies,
+  \item the infrared response is small but non-zero,
+  \item the EFT expansion remains valid.
+\end{itemize}
+
+The relaxation parameter $\alpha(t)$ scales as
+\begin{equation}
+\alpha(t) \propto \frac{1}{M^4},
+\end{equation}
+consistent with the dimension-8 nature of the operator.
+% ========================================================
+% 4 CONNECTION TO RELAXATION AND TENSOR SECTOR
+% ========================================================
+
+\section[Connection to Relaxation and Tensor Sector]{Connection to Relaxation and Tensor Sector}
+
+The ultraviolet sector is directly connected to the relaxation sector
+(Companion III and VI) and the tensor sector (Companion II and XI).
+
+\subsection[Relaxation Parameter]{Relaxation Parameter}
+
+From Eq.~\eqref{eq:dim8action}, the relaxation parameter is defined as
+\begin{equation}
+\alpha(t) = \frac{1}{M^4} \, \mathcal{G}(t),
+\end{equation}
+where $\mathcal{G}(t)$ encodes the infrared geometry of the global state. The
+infrared fixpoint is
+\begin{equation}
+\alpha_{\mathrm{IR}} = \lim_{t \to \infty} \alpha(t),
+\end{equation}
+and controls all deviations from $\Lambda$CDM.
+
+\subsection[Tensor Sector]{Tensor Sector}
+
+The tensor sector receives a quadratic suppression and logarithmic modulation,
+\begin{equation}
+\Omega_{\mathrm{GW}} \propto \alpha_{\mathrm{IR}}^2,
+\end{equation}
+with
+\begin{equation}
+\Omega_{\mathrm{GW}}(k)
+=
+\Omega_{\mathrm{GW}}^{(0)}(k)
+\left[ 1 + \alpha_{\mathrm{IR}} \log(k/k_0) \right].
+\end{equation}
+
+These signatures arise from the global coherence of tensor modes and the
+dimension-8 nature of the inter-sector coupling.
+% ========================================================
+% 5 CONNECTION TO THERMODYNAMIC SECTOR
+% ========================================================
+
+\section[Connection to Thermodynamic Sector]{Connection to Thermodynamic Sector}
+
+The ultraviolet sector also connects to the thermodynamic sector (Companion IV).
+The dimension-8 operator provides the microscopic origin of the Lindblad-like
+effective dissipator,
+\begin{equation}
+\dot{\rho}_{(+)} =
+- i [H_{(+)}, \rho_{(+)}]
++ \mathcal{D}_{\mathrm{eff}}[\rho_{(+)}],
+\end{equation}
+with
+\begin{equation}
+\mathcal{D}_{\mathrm{eff}}[\rho]
+=
+\sum_{n} \gamma_n
+\left(
+L_n \rho L_n^\dagger
+- \frac{1}{2} \{ L_n^\dagger L_n, \rho \}
+\right),
+\end{equation}
+and
+\begin{equation}
+\gamma_n \propto \frac{1}{M^4}.
+\end{equation}
+
+This structure explains the thermodynamic arrow of time in the visible sector
+and the dissipation blockade in the mirror sector.
+% ========================================================
+% 6 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the ultraviolet sector of RDCC in its v49.1 form. The
+inter-sector coupling between the visible and mirror sectors is encoded in the
+dimension-8 operator $T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$, with suppression scale
+$M$. This correction restores EFT coherence, fixes the scaling of the
+relaxation parameter $\alpha(t)$, and determines the ultraviolet origin of the
+tensor and thermodynamic modifications.
+
+These results integrate the relaxation sector (Companion III and VI), the
+tensor sector (Companion II and XI), the thermodynamic sector (Companion IV),
+and the Boltzmann hierarchy (Companion VII). They form the ultraviolet
+backbone of RDCC and ensure that the framework is consistent as an effective
+field theory.
+
+\end{document}

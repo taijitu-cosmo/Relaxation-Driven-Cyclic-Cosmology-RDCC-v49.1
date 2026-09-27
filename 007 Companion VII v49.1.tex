@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion VII (v49.1)}\\[0.2cm]
+\textbf{Boltzmann Hierarchy in a CPT-Symmetric Bipartite Universe}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the corrected Boltzmann hierarchy of RDCC in its
+Phase-1-integrated v49.1 form. The mirror sector replaces cold dark matter as a
+non-compact gravitational component, eliminating the CDM perturbation equation
+and introducing the mirror-sector density contrast \(\delta_{(-)}\). The Poisson
+equation is formulated in fully covariant form and incorporates the
+dimension-8 inter-sector operator \(T^{(+)}_{\mu\nu}T^{(-)\mu\nu}\). The
+coefficients \(C_1\)--\(C_4\) are fixed theoretical factors of order unity rather
+than fit parameters. The hierarchy inherits the relaxation scale
+\(k_{\mathrm{rel}}=a_{\mathrm{fr}}H(a_{\mathrm{fr}})\) from Companion XII,
+which separates standard and relaxation-modified perturbation growth. This
+Companion provides the corrected perturbation structure that underlies RDCC's
+growth suppression, tensor modulation, and survey interface.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+The Boltzmann hierarchy describes the evolution of cosmological perturbations.
+In \(\Lambda\)CDM, cold dark matter (CDM) plays a central role: its density
+contrast \(\delta_{\mathrm{c}}\) drives gravitational clustering and determines
+the growth of structure.
+
+RDCC replaces CDM with the mirror sector, which forms diffuse, non-compact
+halos due to its reversed thermodynamic arrow. These halos contribute
+gravitationally but do not undergo dissipative collapse.
+
+In v49.1, the Boltzmann hierarchy is corrected to reflect this structure:
+\begin{itemize}[leftmargin=0.8cm]
+  \item the CDM perturbation equation is removed,
+  \item \(\delta_{\mathrm{c}}\) is replaced by the mirror-sector contrast \(\delta_{(-)}\),
+  \item the Poisson equation is fully covariant,
+  \item the coefficients \(C_1\)--\(C_4\) are fixed theoretical factors,
+  \item the dimension-8 operator provides the ultraviolet origin of the
+        modification,
+  \item the relaxation parameter \(\alpha(t)\) is globally defined and
+        RG-stabilized,
+  \item the freeze-out scale \(k_{\mathrm{rel}}\) of Companion XII enters the
+        growth sector as a geometric transition scale.
+\end{itemize}
+
+This Companion develops the corrected Boltzmann hierarchy in a form that is
+mathematically precise, physically transparent, and fully compatible with the
+global structure of RDCC.
+
+% ========================================================
+% 2 COVARIANT POISSON EQUATION
+% ========================================================
+
+\section[Covariant Poisson Equation]{Covariant Poisson Equation}
+
+The gravitational potential \(\Phi\) satisfies the covariant Poisson equation
+\begin{equation}
+\nabla^2 \Phi - 3H(\dot{\Phi} + H\Phi)
+=
+4\pi G
+\left(
+\rho_{(+)} \delta_{(+)}
++
+\rho_{(-)} \delta_{(-)}
+\right)
++
+\frac{C_1}{M^4} \, \Xi,
+\end{equation}
+where:
+\begin{itemize}[leftmargin=0.8cm]
+  \item \(\delta_{(+)}\) is the visible-sector density contrast,
+  \item \(\delta_{(-)}\) is the mirror-sector density contrast,
+  \item \(\Xi\) encodes the geometric contribution of the dimension-8 operator,
+  \item \(C_1\) is a fixed theoretical factor of order unity.
+\end{itemize}
+
+% --------------------------------------------------------
+% 2.1 Elimination of CDM and Mirror-Sector Replacement
+% --------------------------------------------------------
+
+\subsection[Elimination of CDM]{Elimination of CDM}
+
+Cold dark matter does not exist in RDCC. Its perturbation equation is removed
+and replaced by the mirror-sector contrast \(\delta_{(-)}\).
+
+The standard CDM equation
+\begin{equation}
+\dot{\delta}_{\mathrm{c}} = -\theta_{\mathrm{c}} + 3\dot{\Phi}
+\end{equation}
+is replaced by
+\begin{equation}
+\dot{\delta}_{(-)} = -\theta_{(-)} + 3\dot{\Phi},
+\end{equation}
+with \(\theta_{(-)}\) the mirror-sector velocity divergence.
+
+The mirror sector behaves as a non-compact gravitational component.
+
+% --------------------------------------------------------
+% 2.2 Relaxation Scale and Perturbation Transition
+% --------------------------------------------------------
+
+\subsection{Relaxation Scale and Perturbation Transition}
+
+The perturbation sector inherits a characteristic geometric scale from the
+freeze-out dynamics of the relaxation sector. Companion XII established the
+relaxation scale
+\begin{equation}
+  k_{\mathrm{rel}}
+  =
+  a_{\mathrm{fr}} H(a_{\mathrm{fr}}),
+\end{equation}
+where
+\begin{equation}
+  a_{\mathrm{fr}} \simeq 10^{-4}
+\end{equation}
+marks the freeze-out epoch of the global relaxation field.
+
+This scale separates two perturbative regimes. For
+\begin{equation}
+  k < k_{\mathrm{rel}},
+\end{equation}
+perturbations remain largely unaffected by relaxation effects. For
+\begin{equation}
+  k > k_{\mathrm{rel}},
+\end{equation}
+relaxation-induced suppression becomes significant. The relaxation scale
+therefore acts as the transition scale between standard and
+relaxation-modified perturbation growth.
+
+% ========================================================
+% 3 BOLTZMANN HIERARCHY
+% ========================================================
+
+\section[Boltzmann Hierarchy]{Boltzmann Hierarchy}
+
+The Boltzmann hierarchy for photons, baryons, neutrinos, and the mirror sector
+is given by the standard equations with the corrected gravitational source
+terms.
+
+\subsection[Photon Hierarchy]{Photon Hierarchy}
+
+\begin{align}
+\dot{\delta}_{\gamma} &= -\frac{4}{3}\theta_{\gamma} + 4\dot{\Phi}, \\
+\dot{\theta}_{\gamma} &= k^2 \left( \frac{\delta_{\gamma}}{4} - \sigma_{\gamma} \right)
++ k^2 \Psi.
+\end{align}
+
+\subsection[Mirror-Sector Hierarchy]{Mirror-Sector Hierarchy}
+
+The mirror sector behaves as a non-compact gravitational component:
+\begin{align}
+\dot{\delta}_{(-)} &= -\theta_{(-)} + 3\dot{\Phi}, \\
+\dot{\theta}_{(-)} &= -H\theta_{(-)} + k^2 \Psi.
+\end{align}
+
+% --------------------------------------------------------
+% 3.1 Fixed C-Coefficients
+% --------------------------------------------------------
+
+\subsection[Fixed C coefficients]{Fixed \(C_1\)--\(C_4\) Coefficients}
+
+The coefficients \(C_1\)--\(C_4\) are fixed theoretical factors of order unity:
+\begin{align}
+C_1 &\sim \mathcal{O}(1), \\
+C_2 &\sim \mathcal{O}(1), \\
+C_3 &\sim \mathcal{O}(1), \\
+C_4 &\sim \mathcal{O}(1).
+\end{align}
+
+They are not fit parameters. Their values arise from the global geometric
+structure and the dimension-8 operator.
+
+% --------------------------------------------------------
+% 3.2 Relaxation-Modified Growth
+% --------------------------------------------------------
+
+\subsection{Relaxation-Modified Growth}
+
+The mirror-sector perturbations inherit the relaxation scale through the
+freeze-out geometry. The growth factor may be written schematically as
+\begin{equation}
+  D_{\mathrm{RDCC}}(k,a)
+  =
+  D(a)
+  \left[
+    1
+    -
+    \chi_D
+    \left(
+      \frac{k}{k_{\mathrm{rel}}}
+    \right)^{n}
+  \right].
+\end{equation}
+Similarly, the growth rate becomes
+\begin{equation}
+  f_{\mathrm{RDCC}}(k,a)
+  =
+  f(a)
+  \left[
+    1
+    -
+    \chi_f
+    \left(
+      \frac{k}{k_{\mathrm{rel}}}
+    \right)^{n}
+  \right].
+\end{equation}
+The appearance of the same relaxation scale in both growth observables and
+tensor damping provides evidence for a common geometric origin.
+
+% --------------------------------------------------------
+% 3.3 Connection to Background Cosmology
+% --------------------------------------------------------
+
+\subsection{Connection to Background Cosmology}
+
+Companion XI introduced the relaxation correction to the background cosmology,
+\begin{equation}
+  \delta_{\mathrm{rel}}(z)
+  =
+  \alpha_{\mathrm{IR}}\, f_{\mathrm{rel}}(z).
+\end{equation}
+The perturbation hierarchy must remain consistent with this background
+modification. Consequently, the growth of perturbations is influenced
+indirectly through the modified expansion rate,
+\begin{equation}
+  H(z)
+  =
+  H_{\Lambda\mathrm{CDM}}(z)
+  \left[
+    1 + \delta_{\mathrm{rel}}(z)
+  \right].
+\end{equation}
+The resulting coupling between background evolution and perturbation growth
+provides the basis for future numerical implementations of RDCC in Boltzmann
+solvers.
+
+% --------------------------------------------------------
+% 3.4 Relaxation-Dominated Regime
+% --------------------------------------------------------
+
+\subsection{Relaxation-Dominated Regime}
+
+The perturbation spectrum naturally divides into two sectors. The large-scale
+sector
+\begin{equation}
+  k < k_{\mathrm{rel}}
+\end{equation}
+remains close to the standard evolution. The small-scale sector
+\begin{equation}
+  k > k_{\mathrm{rel}}
+\end{equation}
+experiences relaxation-induced damping generated by the dimension-8 interaction
+between the visible and mirror sectors. This transition represents the
+perturbative counterpart to the freeze-out geometry established in
+Companion XII.
+
+% ========================================================
+% 4 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected Boltzmann hierarchy of RDCC in its
+v49.1 form. The CDM perturbation equation is removed and replaced by the
+mirror-sector contrast \(\delta_{(-)}\), reflecting the non-compact nature of the
+mirror sector. The Poisson equation is formulated in fully covariant form and
+incorporates the dimension-8 inter-sector operator.
+
+The hierarchy inherits the geometric transition scale
+\begin{equation}
+  k_{\mathrm{rel}} = a_{\mathrm{fr}} H(a_{\mathrm{fr}})
+\end{equation}
+from Companion XII. Growth factor and growth rate are modified for
+\(k>k_{\mathrm{rel}}\) and remain consistent with the background correction
+of Companion XI.
+
+The coefficients \(C_1\)--\(C_4\) are fixed theoretical factors of order unity,
+ensuring that the perturbation structure is fully determined by the global
+geometry. These results integrate the relaxation sector (Companion III), the
+thermodynamic sector (Companion IV), the ultraviolet sector (Companion X), the
+freeze-out geometry (Companion XII), and the growth suppression
+(Companion XIII). They form the backbone of RDCC's perturbation theory and are
+essential for the likelihood structure (Companion VIII) and parameter
+estimation (Companion IX).
+
+\end{document}

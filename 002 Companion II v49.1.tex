@@ -1,0 +1,175 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion II (v49.1)}\\[0.2cm]
+\textbf{Global Tensor Coherence in a CPT-Symmetric Bipartite Universe}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the tensor sector of RDCC in its fully reconstructed
+and Phase-1-integrated v49.1 form. Tensor modes are global geometric degrees of
+freedom defined on the bipartite Hilbert space and remain coherent across both
+sectors of the CPT-symmetric global state. Their evolution is governed not by
+local field dynamics but by the global structure of the metric. This Companion
+derives the corrected propagation equations, establishes the role of the
+dimension-8 inter-sector operator, and explains the quadratic suppression and
+logarithmic modulation of the stochastic gravitational-wave background. These
+results integrate the relaxation sector (Companion III), the ultraviolet sector
+(Companion X), and the tensor–relaxation coupling (Companion XI).
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+In standard cosmology, tensor modes are treated as local perturbations of the
+metric, generated during inflation and subsequently decohering as the Universe
+expands. RDCC replaces this picture with a fundamentally different structure:
+the Universe is described by a global CPT-symmetric quantum state defined on a
+bipartite Hilbert space. The metric is a global geometric degree of freedom
+that couples to both sectors simultaneously.
+
+As a consequence, tensor modes are not local fields but global excitations of
+the metric. They remain coherent across both sectors and are not subject to the
+decoherence that affects scalar and vector modes. This global coherence is a
+structural prediction of RDCC and forms the foundation for the tensor sector.
+
+This Companion develops the corrected tensor sector of RDCC in its v49.1 form.
+We derive the global tensor equation, establish the role of the dimension-8
+inter-sector operator, and explain the origin of the quadratic suppression and
+logarithmic modulation of the stochastic gravitational-wave background.
+% ========================================================
+% 2 GLOBAL TENSOR STRUCTURE
+% ========================================================
+
+\section{Global Tensor Structure}
+
+Tensor modes are defined as transverse-traceless perturbations of the global
+metric,
+\begin{equation}
+g_{\mu\nu} = \bar{g}_{\mu\nu} + h_{\mu\nu},
+\end{equation}
+with
+\begin{equation}
+\nabla^\mu h_{\mu\nu} = 0, \qquad h^\mu_{\ \mu} = 0.
+\end{equation}
+
+Unlike scalar and vector modes, tensor modes are not associated with local
+degrees of freedom. They are global excitations of the metric and therefore
+remain coherent across both sectors of the bipartite Hilbert space.
+% --------------------------------------------------------
+% 2.1 Bipartite Coherence
+% --------------------------------------------------------
+
+\subsection[Bipartite Tensor Coherence]{Bipartite Tensor Coherence}
+
+The global state is written as
+\begin{equation}
+\ket{\Psi} = \sum_n \lambda_n \ket{n}_{(+)} \otimes \ket{n}_{(-)}.
+\end{equation}
+
+Tensor modes correspond to excitations of the global metric operator,
+\begin{equation}
+\hat{h}_{\mu\nu}
+=
+\hat{h}_{\mu\nu}^{(+)} \otimes \mathbb{1}_{(-)}
++
+\mathbb{1}_{(+)} \otimes \hat{h}_{\mu\nu}^{(-)}.
+\end{equation}
+
+Because the metric is global, tensor modes do not decohere under sectoral
+projection. The reduced density matrices
+\begin{equation}
+\rho_{(+)} = \Tr_{(-)} \ket{\Psi}\bra{\Psi}, \qquad
+\rho_{(-)} = \Tr_{(+)} \ket{\Psi}\bra{\Psi},
+\end{equation}
+retain the full tensor coherence of the global state.
+% ========================================================
+% 3 DIMENSION-8 OPERATOR AND TENSOR MODULATION
+% ========================================================
+
+\section[Dimension-8 Operator and Tensor Modulation]{Dimension-8 Operator and Tensor Modulation}
+
+The inter-sector operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}} = T^{(+)}_{\mu\nu} T_{(-)}^{\mu\nu}
+\end{equation}
+has mass dimension 8. Its contribution to the tensor sector is suppressed by
+$M^{-4}$,
+\begin{equation}
+S_{\mathrm{int}} \supset
+\frac{1}{M^4} \int d^4x \sqrt{-g} \,
+T^{(+)}_{\mu\nu} T_{(-)}^{\mu\nu}.
+\end{equation}
+
+This correction induces a small modulation of the tensor power spectrum,
+\begin{equation}
+\Omega_{\mathrm{GW}}(k)
+=
+\Omega_{\mathrm{GW}}^{(0)}(k)
+\left[ 1 + \alpha_{\mathrm{IR}} \log(k/k_0) \right],
+\end{equation}
+and a quadratic suppression,
+\begin{equation}
+\Omega_{\mathrm{GW}} \propto \alpha_{\mathrm{IR}}^2.
+\end{equation}
+
+These signatures are unique to RDCC and arise from the global coherence of
+tensor modes.
+% ========================================================
+% 4 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected tensor sector of RDCC in its v49.1 form.
+Tensor modes are global geometric degrees of freedom that remain coherent across
+both sectors of the CPT-symmetric bipartite Hilbert space. Their evolution is
+governed by the global structure of the metric and the ultraviolet-suppressed
+dimension-8 inter-sector operator.
+
+The resulting quadratic suppression and logarithmic modulation of the tensor
+spectrum form the basis of RDCC's gravitational-wave phenomenology. These
+results integrate the relaxation sector (Companion III), the ultraviolet sector
+(Companion X), and the tensor–relaxation coupling developed in Companion XI.
+Observational predictions are presented in Companion XIV.
+
+\end{document}

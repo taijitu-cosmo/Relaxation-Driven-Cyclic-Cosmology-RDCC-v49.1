@@ -1,0 +1,266 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{tensor}
+\usepackage{mathtools}
+\usepackage{bbm}
+
+\geometry{margin=2.5cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion I (v49.1)}\\[0.2cm]
+\textbf{Global CPT Symmetry and Structural Gravity}\\[0.3cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author{Michael Lehmann\\
+Independent Researcher\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ---------------------------------------------------------
+% ABSTRACT
+% ---------------------------------------------------------
+\begin{abstract}
+Relaxation-Driven Cyclic Cosmology (RDCC) describes the Universe as a globally
+CPT-symmetric quantum state defined on a bipartite Hilbert space
+$\mathcal{H} = \mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)}$. The visible and
+mirror sectors arise as reduced density matrices of a single global state and
+possess thermodynamic arrows of time that point in opposite directions. Gravity
+is the only interaction that couples to the \emph{total} stress-energy tensor
+and therefore probes the full global state. In v49.1, the foundational
+structure of RDCC is fully Phase-1-integrated: the inter-sector operator
+$T^{(+)}_{\mu\nu}T^{(-)\mu\nu}$ is consistently treated as a dimension-8
+operator, the relaxation parameter $\alpha(t)$ is globally defined and
+RG-stabilized, and the mirror sector forms diffuse, non-compact halos. This
+Companion establishes the conceptual and mathematical backbone for all
+subsequent RDCC components.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ============================================================
+\section{Introduction}
+% ============================================================
+
+Standard cosmology assumes a single thermodynamic sector evolving forward in
+time. RDCC extends this picture by proposing that the Universe is fundamentally
+a \emph{global} CPT-symmetric quantum state defined on a bipartite Hilbert
+space,
+\begin{equation}
+\mathcal{H} = \mathcal{H}_{(+)} \otimes \mathcal{H}_{(-)}.
+\end{equation}
+
+Sectoral observers access only one factor of this Hilbert space and therefore
+perceive an effectively time-oriented, thermodynamic Universe. The mirror
+sector is the CPT-conjugate projection of the visible sector and possesses a
+thermodynamic arrow of time that points in the opposite direction.
+
+Gauge interactions act strictly within one sector. Gravity is distinguished by
+its coupling to the \emph{total} stress-energy tensor,
+\begin{equation}
+T^{\mathrm{tot}}_{\mu\nu}
+=
+T^{(+)}_{\mu\nu}
++
+T^{(-)}_{\mu\nu},
+\end{equation}
+and therefore probes the full global state. This structural asymmetry is the
+origin of the gravitational contribution of the mirror sector to the visible
+sector.
+
+In v49.1, the foundational structure of RDCC is refined and fully Phase-1-
+integrated: the inter-sector operator is treated as a dimension-8 operator, the
+relaxation parameter $\alpha(t)$ is globally defined and RG-stabilized, and the
+mirror sector forms diffuse, non-compact halos.
+% ============================================================
+\section[Global CPT Structure]{Global CPT Structure and Bipartite Hilbert Space}
+% ============================================================
+
+The global state may be written in Schmidt form,
+\begin{equation}
+\ket{\Psi}
+=
+\sum_{i} \lambda_{i}\,
+\ket{i}_{(+)} \otimes \ket{i}_{(-)},
+\end{equation}
+with coefficients $\lambda_{i}$ encoding inter-sector correlations.
+
+A visible-sector observer perceives the reduced density matrix,
+\begin{equation}
+\rho_{(+)}
+=
+\mathrm{Tr}_{(-)}\left(\ket{\Psi}\bra{\Psi}\right),
+\end{equation}
+and all local observables are defined on $\mathcal{H}_{(+)}$ alone.
+
+The mirror sector arises analogously,
+\begin{equation}
+\rho_{(-)}
+=
+\mathrm{Tr}_{(+)}\left(\ket{\Psi}\bra{\Psi}\right).
+\end{equation}
+
+Both reduced states are mixed even when the global state is pure. This
+decoherence is structural: it arises from tracing out the degrees of freedom of
+the opposite sector.
+
+Global CPT symmetry requires
+\begin{equation}
+\mathrm{CPT}\ket{\Psi} = \ket{\Psi},
+\end{equation}
+and enforces opposite thermodynamic arrows of time,
+\begin{equation}
+t_{(-)} = - t_{(+)}.
+\end{equation}
+% ============================================================
+\section{Structural Gravity and Sectoral Projection}
+% ============================================================
+
+Gravity responds to the full global state. The global Einstein equation is
+\begin{equation}
+G_{\mu\nu}[g]
+=
+8\pi G_{N}\left(
+T^{(+)}_{\mu\nu}
++
+T^{(-)}_{\mu\nu}
+\right).
+\label{eq:globalEinstein}
+\end{equation}
+
+A sectoral observer infers the projected Einstein equation,
+\begin{equation}
+G_{\mu\nu}[g]
+=
+8\pi G_{\mathrm{eff}}\,T^{(+)}_{\mu\nu},
+\label{eq:sectoralEinstein}
+\end{equation}
+with an effective gravitational coupling $G_{\mathrm{eff}}$.
+
+Linearizing the global response yields
+\begin{equation}
+\delta G_{\mu\nu}
+=
+8\pi G_{N}\left(
+\delta T^{(+)}_{\mu\nu}
++
+\delta T^{(-)}_{\mu\nu}
+\right).
+\end{equation}
+
+Equating global and sectoral responses gives
+\begin{equation}
+G_{\mathrm{eff}}
+=
+G_{N}\left(
+1
++
+\frac{\delta T^{(-)}_{\mu\nu}}{\delta T^{(+)}_{\mu\nu}}
+\right).
+\end{equation}
+
+For homogeneous FRW backgrounds,
+\begin{equation}
+\frac{\delta T^{(-)}_{\mu\nu}}{\delta T^{(+)}_{\mu\nu}}
+=
+\frac{\rho_{(-)}}{\rho_{(+)}},
+\end{equation}
+leading to
+\begin{equation}
+G_{\mathrm{eff}}
+=
+G_{N}\left(
+1
++
+\frac{\rho_{(-)}}{\rho_{(+)}}
+\right).
+\label{eq:GeffFinal}
+\end{equation}
+% ============================================================
+\section[Dimension-8 Operator and Global alpha(t)]{Dimension-8 Operator and Global $\alpha(t)$}
+% ============================================================
+
+The inter-sector coupling is encoded in the dimension-8 operator
+\begin{equation}
+\mathcal{O}_{\mathrm{int}}
+=
+T^{(+)}_{\mu\nu}T^{(-)\mu\nu},
+\end{equation}
+with effective action
+\begin{equation}
+S_{\mathrm{int}}
+=
+\int d^4x \sqrt{-g}\,
+\frac{1}{M^{4}}\,
+T^{(+)}_{\mu\nu}T^{(-)\mu\nu}.
+\end{equation}
+
+The relaxation parameter $\alpha(t)$ is defined globally as the infrared
+response of the metric to this operator,
+\begin{equation}
+\alpha(t) \propto \frac{1}{M^{4}}.
+\end{equation}
+
+RG flow stabilizes the coupling in the infrared,
+\begin{equation}
+\dot{\alpha}(t) = -\Gamma_{\mathrm{IR}}\,\alpha(t),
+\end{equation}
+with solution
+\begin{equation}
+\alpha(t)
+=
+\alpha_{\mathrm{IR}}
++
+\left(\alpha_{0}-\alpha_{\mathrm{IR}}\right)
+e^{-\Gamma_{\mathrm{IR}} t}.
+\end{equation}
+% ============================================================
+\section{Bounce Structure}
+% ============================================================
+
+At the bounce,
+\begin{equation}
+H(t_{b}) = 0,
+\qquad
+\alpha(t_{b}) = 0,
+\end{equation}
+and the two sectors become maximally correlated. The global state is perfectly
+CPT-symmetric, and the metric responds to the total stress-energy tensor.
+
+The visible sector perceives a nonsingular bounce because the mirror-sector
+energy density appears as a purely gravitational contribution and provides the
+structural origin of dark matter.
+
+% ============================================================
+\section{Conclusion}
+% ============================================================
+
+This Companion develops the refined foundational structure of RDCC in its
+v49.1 form. Gravity acts as the global bridge between the CPT-conjugate
+sectors, responding to the sum of their stress-energy tensors. The inter-sector
+operator is consistently treated as a dimension-8 operator, restoring EFT
+coherence and providing the microscopic origin of the global relaxation
+parameter $\alpha(t)$.
+
+These foundations support the relaxation sector (Companion III), the tensor
+sector (Companion II and XIV), the thermodynamic sector (Companion IV), the
+ultraviolet structure (Companion X), and the survey interface (Companion XII).
+
+\end{document}

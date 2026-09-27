@@ -1,0 +1,222 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{cite}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{enumitem}
+
+\geometry{margin=2.4cm}
+
+% ---------------------------------------------------------
+% TITLE
+% ---------------------------------------------------------
+\title{\textbf{Companion IX (v49.1)}\\[0.2cm]
+\textbf{Parameter Estimation and RDCC Parameter Space}\\[0.2cm]
+\large Foundations of Relaxation-Driven Cyclic Cosmology (RDCC)}
+
+\author[1]{Michael Lehmann}
+\affil[1]{\small Independent Researcher, Relaxation-Driven Cyclic Cosmology (RDCC)\\
+\texttt{mi.lehmann@gmx.de}}
+
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+% ========================================================
+% ABSTRACT
+% ========================================================
+
+\begin{abstract}
+This Companion develops the corrected parameter-estimation structure of RDCC in
+its Phase-1-integrated v49.1 form. The RDCC parameter space is globally defined
+and incorporates the infrared relaxation parameter $\alpha_{\mathrm{IR}}$, the
+mirror-sector density contrast $\delta_{(-)}$, the geometric coefficients
+$C_1$–$C_4$, and the ultraviolet scale $M$. The likelihood structure developed
+in Companion VIII is used to construct the posterior distribution, and the
+Boltzmann hierarchy of Companion VII provides the theoretical predictions. This
+Companion establishes the statistical backbone of RDCC and defines the
+parameter space used in all survey analyses.
+\end{abstract}
+
+\tableofcontents
+\newpage
+% ========================================================
+% 1 INTRODUCTION
+% ========================================================
+
+\section{Introduction}
+
+Parameter estimation in RDCC differs fundamentally from $\Lambda$CDM. RDCC is a
+global framework defined on a bipartite Hilbert space, and its parameters
+reflect the geometric, thermodynamic, and ultraviolet structure of the global
+state.
+
+In v49.1, the parameter space is corrected to:
+\begin{itemize}[leftmargin=0.8cm]
+  \item include the infrared relaxation parameter $\alpha_{\mathrm{IR}}$,
+  \item include the mirror-sector density contrast $\delta_{(-)}$,
+  \item treat $C_1$–$C_4$ as fixed theoretical factors,
+  \item incorporate the ultraviolet scale $M$,
+  \item remain fully EFT-coherent and statistically consistent.
+\end{itemize}
+
+This Companion develops the corrected RDCC parameter space and its connection to
+the likelihood structure of Companion VIII.
+% ========================================================
+% 2 RDCC PARAMETER SPACE
+% ========================================================
+
+\section[RDCC Parameter Space]{RDCC Parameter Space}
+
+The RDCC parameter space consists of:
+\begin{itemize}[leftmargin=0.8cm]
+  \item standard cosmological parameters,
+  \item RDCC-specific parameters,
+  \item survey nuisance parameters.
+\end{itemize}
+
+\subsection[Standard Parameters]{Standard Cosmological Parameters}
+
+\begin{align}
+\Omega_{\mathrm{b}} h^2 &\quad \text{baryon density}, \\
+\Omega_{\mathrm{r}} h^2 &\quad \text{radiation density}, \\
+H_0 &\quad \text{Hubble parameter}, \\
+n_s &\quad \text{scalar spectral index}, \\
+A_s &\quad \text{scalar amplitude}.
+\end{align}
+
+\subsection[RDCC-Specific Parameters]{RDCC-Specific Parameters}
+
+\begin{align}
+\alpha_{\mathrm{IR}} &\quad \text{infrared relaxation parameter}, \\
+M &\quad \text{ultraviolet suppression scale}, \\
+\delta_{(-)} &\quad \text{mirror-sector density contrast}, \\
+C_1, C_2, C_3, C_4 &\quad \text{fixed geometric coefficients}.
+\end{align}
+
+\subsection[Nuisance Parameters]{Survey Nuisance Parameters}
+
+These include calibration parameters, bias parameters, and noise parameters for
+each survey.
+% ========================================================
+% 3 POSTERIOR DISTRIBUTION
+% ========================================================
+
+\section[Posterior Distribution]{Posterior Distribution}
+
+The posterior distribution is defined as
+\begin{equation}
+P(\boldsymbol{\theta}|\mathbf{d})
+\propto
+\mathcal{L}(\boldsymbol{\theta})
+\,
+\pi(\boldsymbol{\theta}),
+\end{equation}
+where:
+\begin{itemize}[leftmargin=0.8cm]
+  \item $\mathcal{L}(\boldsymbol{\theta})$ is the likelihood from Companion VIII,
+  \item $\pi(\boldsymbol{\theta})$ is the prior distribution.
+\end{itemize}
+
+The likelihood is
+\begin{equation}
+\mathcal{L}(\boldsymbol{\theta})
+=
+\exp\left(
+-\frac{1}{2}
+\Delta\mathbf{d}^{\mathrm{T}}
+\mathbf{C}^{-1}
+\Delta\mathbf{d}
+\right),
+\end{equation}
+with residual vector
+\begin{equation}
+\Delta\mathbf{d}
+=
+\mathbf{d}
+-
+\mathbf{t}(\boldsymbol{\theta}).
+\end{equation}
+% ========================================================
+% 4 PRIORS
+% ========================================================
+
+\section{Priors}
+
+The priors reflect the global geometric structure of RDCC.
+
+\subsection[Standard Priors]{Standard Cosmological Priors}
+
+Flat or weakly informative priors are used for:
+\begin{align}
+\Omega_{\mathrm{b}} h^2, \quad
+\Omega_{\mathrm{r}} h^2, \quad
+H_0, \quad
+n_s, \quad
+A_s.
+\end{align}
+
+\subsection[RDCC Priors]{RDCC-Specific Priors}
+
+\begin{itemize}[leftmargin=0.8cm]
+  \item $\alpha_{\mathrm{IR}}$: positive, small, infrared-saturated,
+  \item $M$: large ultraviolet scale,
+  \item $\delta_{(-)}$: diffuse, non-compact halo contrast,
+  \item $C_1$–$C_4$: fixed theoretical factors of order unity.
+\end{itemize}
+% ========================================================
+% 5 SAMPLING AND INFERENCE
+% ========================================================
+
+\section{Sampling and Inference}
+
+Sampling is performed using standard MCMC or nested sampling algorithms. The
+RDCC-specific parameters enter through:
+\begin{itemize}[leftmargin=0.8cm]
+  \item the Boltzmann hierarchy (Companion VII),
+  \item the relaxation geometry (Companion VI),
+  \item the tensor sector (Companion II and XI),
+  \item the thermodynamic sector (Companion IV),
+  \item the ultraviolet sector (Companion X).
+\end{itemize}
+
+The posterior distribution provides constraints on:
+\begin{itemize}[leftmargin=0.8cm]
+  \item $\alpha_{\mathrm{IR}}$,
+  \item the mirror-sector density contrast $\delta_{(-)}$,
+  \item the ultraviolet scale $M$,
+  \item the geometric coefficients $C_1$–$C_4$.
+\end{itemize}
+% ========================================================
+% 6 CONCLUSION
+% ========================================================
+
+\section{Conclusion}
+
+This Companion develops the corrected parameter-estimation structure of RDCC in
+its v49.1 form. The RDCC parameter space incorporates the infrared relaxation
+parameter $\alpha_{\mathrm{IR}}$, the mirror-sector density contrast
+$\delta_{(-)}$, the geometric coefficients $C_1$–$C_4$, and the ultraviolet
+scale $M$. The likelihood structure of Companion VIII and the Boltzmann
+hierarchy of Companion VII provide the theoretical backbone for parameter
+estimation.
+
+These results integrate the relaxation sector (Companion III and VI), the
+thermodynamic sector (Companion IV), the ultraviolet sector (Companion X), and
+the survey interface (Companion XII). They form the statistical foundation of
+RDCC and connect the theoretical framework to observational data.
+
+\end{document}
